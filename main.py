@@ -13,7 +13,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 if TOKEN is None:
     raise ValueError("DISCORD_TOKEN ontbreekt.")
 
-bot = DracoBot()
+bot = Draco()
 
 
 @bot.tree.command(
