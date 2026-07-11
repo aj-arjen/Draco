@@ -7,6 +7,7 @@ import os
 
 from bot import Draco
 from settings import TOKEN
+from views import ApplyView
 
 bot = Draco()
 
@@ -70,7 +71,10 @@ async def setup(interaction: discord.Interaction):
         text="⚔️ Good luck, Warrior! — Draco 🐉"
     )
 
-    await interaction.channel.send(embed=embed)
+    await interaction.channel.send(
+    embed=embed,
+    view=ApplyView()
+)
 
     await interaction.response.send_message(
         "✅ Application panel created.",
