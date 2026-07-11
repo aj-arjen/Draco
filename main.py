@@ -4,7 +4,7 @@ from threading import Thread
 
 from dotenv import load_dotenv
 
-from bot import DracoBot
+from bot import Draco
 
 load_dotenv()
 
