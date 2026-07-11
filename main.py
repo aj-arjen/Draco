@@ -36,5 +36,11 @@ def run_web():
     app.run(host="0.0.0.0", port=10000)
 
 Thread(target=run_web).start()
+import asyncio
+
+async def load_extensions():
+    await bot.load_extension("cogs.setup")
+
+asyncio.run(load_extensions())
 
 bot.run(TOKEN)
