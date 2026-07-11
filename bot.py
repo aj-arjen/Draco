@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class Draco(commands.Bot):
+class DracoBot(commands.Bot):
 
     def __init__(self):
 
