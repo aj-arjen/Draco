@@ -71,4 +71,19 @@ async def setup(interaction: discord.Interaction):
         "✅ Application panel created.",
         ephemeral=True
     )
+    from flask import Flask
+from threading import Thread
+import os
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "DracoBot is running!"
+
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+Thread(target=run_web).start()
 bot.run(TOKEN)
