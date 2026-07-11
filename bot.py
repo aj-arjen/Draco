@@ -19,7 +19,7 @@ class Draco(commands.Bot):
         )
 
     async def setup_hook(self):
-    await self.tree.sync()
+        await self.tree.sync()
     async def on_ready(self):
 
         print("-" * 50)
