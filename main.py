@@ -1,4 +1,6 @@
 import os
+from flask import Flask
+from threading import Thread
 
 from dotenv import load_dotenv
 
@@ -24,5 +26,15 @@ async def ping(interaction):
         ephemeral=True
     )
 
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Draco is online!"
+
+def run_web():
+    app.run(host="0.0.0.0", port=10000)
+
+Thread(target=run_web).start()
 
 bot.run(TOKEN)
