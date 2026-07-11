@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class DracoBot(commands.Bot):
+class Draco(commands.Bot):
 
     def __init__(self):
 
@@ -19,6 +19,7 @@ class DracoBot(commands.Bot):
         )
 
     async def setup_hook(self):
+      await self.load_extension("cogs.setup")
         await self.tree.sync()
 
     async def on_ready(self):
