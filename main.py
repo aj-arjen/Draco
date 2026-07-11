@@ -1,4 +1,9 @@
 import discord
+from discord.ext import commands
+
+from flask import Flask
+from threading import Thread
+import os
 
 from bot import Draco
 from settings import TOKEN
@@ -71,9 +76,6 @@ async def setup(interaction: discord.Interaction):
         "✅ Application panel created.",
         ephemeral=True
     )
-    from flask import Flask
-from threading import Thread
-import os
 
 app = Flask(__name__)
 
