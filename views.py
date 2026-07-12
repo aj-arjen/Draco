@@ -67,9 +67,9 @@ class GuildView(discord.ui.View):
         interaction: discord.Interaction,
         select: discord.ui.Select
     ):
-        await interaction.response.edit_message(
-    content="⭐ Select your rank:",
-    view=RankView(
+    await interaction.response.edit_message(
+        content="⭐ Select your rank:",
+        view=RankView(
         self.language,
         select.values[0]
     )
@@ -135,12 +135,12 @@ class ReviewView(discord.ui.View):
         member = interaction.guild.get_member(self.user_id)
         verified_role = interaction.guild.get_role(VERIFIED_ROLE)
 
-if member and verified_role:
-    await member.add_roles(verified_role)
+    if member and verified_role:
+        await member.add_roles(verified_role)
 
-guild_role = interaction.guild.get_role(GUILD_ROLES[self.guild])
+        guild_role = interaction.guild.get_role(GUILD_ROLES[self.guild])
 
-if self.rank == "Leader":
+    if self.rank == "leader":
     rank_role = interaction.guild.get_role(
         LEADER_ROLES[self.guild]
     )
@@ -149,13 +149,13 @@ else:
         MEMBER_ROLES[self.guild]
     )
     
-if member and guild_role:
-    await member.add_roles(guild_role)
+    if member and guild_role:
+        await member.add_roles(guild_role)
     
-if member and rank_role:
-    await member.add_roles(rank_role)
+    if member and rank_role:
+        await member.add_roles(rank_role)
 
-    await interaction.followup.send(
+        await interaction.followup.send(
             f"✅ Application accepted by {interaction.user.mention}"
         )
 
