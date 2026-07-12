@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from views import ApplyView
 
 
 class Setup(commands.Cog):
@@ -54,7 +55,10 @@ class Setup(commands.Cog):
             text="⚔️ Good luck, Warrior! — Draco 🐉"
         )
 
-        await interaction.channel.send(embed=embed)
+        await interaction.channel.send(
+            embed=embed,
+            view=ApplyView()
+)
 
         await interaction.response.send_message(
             "✅ Application panel created.",
