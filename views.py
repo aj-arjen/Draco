@@ -67,11 +67,11 @@ class GuildView(discord.ui.View):
         interaction: discord.Interaction,
         select: discord.ui.Select
     ):
-    await interaction.response.edit_message(
-        content="⭐ Select your rank:",
-        view=RankView(
-        self.language,
-        select.values[0]
+        await interaction.response.edit_message(
+            content="⭐ Select your rank:",
+            view=RankView(
+            self.language,
+            select.values[0]
     )
 )
     
