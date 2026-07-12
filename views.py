@@ -1,6 +1,104 @@
 import discord
 
 
+class LanguageView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=300)
+
+    @discord.ui.select(
+        placeholder="Select your language...",
+        custom_id="language_select",
+        options=[
+            discord.SelectOption(label="English"),
+            discord.SelectOption(label="Deutsch"),
+            discord.SelectOption(label="Français"),
+            discord.SelectOption(label="Español"),
+            discord.SelectOption(label="Português"),
+            discord.SelectOption(label="中文"),
+            discord.SelectOption(label="Tiếng Việt"),
+            discord.SelectOption(label="ไทย"),
+            discord.SelectOption(label="Русский"),
+            discord.SelectOption(label="日本語"),
+            discord.SelectOption(label="Nederlands"),
+            discord.SelectOption(label="Italiano"),
+            discord.SelectOption(label="العربية"),
+            discord.SelectOption(label="עברית"),
+        ]
+    )
+    async def language_select(
+        self,
+        interaction: discord.Interaction,
+        select: discord.ui.Select
+    ):
+    await interaction.response.edit_message(
+    content="🏰 Select your guild:",
+    view=GuildView(select.values[0])
+)
+
+
+class GuildView(discord.ui.View):
+    def __init__(self, language):
+        super().__init__(timeout=300)
+        self.language = language
+
+    @discord.ui.select(
+        placeholder="Select your guild...",
+        custom_id="guild_select",
+        options=[
+            discord.SelectOption(label="DEN"),
+            discord.SelectOption(label="ACE"),
+            discord.SelectOption(label="NVN"),
+            discord.SelectOption(label="OFA"),
+            discord.SelectOption(label="OBS"),
+            discord.SelectOption(label="Other"),
+        ]
+    )
+    async def guild_select(
+        self,
+        interaction: discord.Interaction,
+        select: discord.ui.Select
+    ):
+        await interaction.response.edit_message(
+    content="⭐ Select your rank:",
+    view=RankView(
+        self.language,
+        select.values[0]
+    )
+)
+    
+class RankView(discord.ui.View):
+    def __init__(self, language, guild):
+        super().__init__(timeout=300)
+        self.language = language
+        self.guild = guild
+
+    @discord.ui.select(
+        placeholder="Select your rank...",
+        custom_id="rank_select",
+        options=[
+            discord.SelectOption(
+                label="R1 / R2 / R3",
+                value="member"
+            ),
+            discord.SelectOption(
+                label="R4 / R5",
+                value="leader"
+            ),
+        ]
+    )
+    async def rank_select(
+        self,
+        interaction: discord.Interaction,
+        select: discord.ui.Select
+    ):
+        await interaction.response.send_modal(
+    ApplicationModal(
+        language=self.language,
+        guild=self.guild,
+        rank=select.values[0]
+    )
+)
+
 class ReviewView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
@@ -47,27 +145,14 @@ class ReviewView(discord.ui.View):
 
 
 class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
+  
+def __init__(self, language, guild, rank):
+    super().__init__()
 
-    language = discord.ui.TextInput(
-        label="Language",
-        placeholder="English / Dutch / German...",
-        required=True,
-        max_length=20
-    )
+    self.language = language
+    self.guild = guild
+    self.rank = rank  
 
-    guild = discord.ui.TextInput(
-        label="Guild",
-        placeholder="Which guild do you want to join?",
-        required=True,
-        max_length=30
-    )
-
-    rank = discord.ui.TextInput(
-        label="Rank",
-        placeholder="Member / Veteran / Officer...",
-        required=True,
-        max_length=20
-    )
 
     ingame_name = discord.ui.TextInput(
         label="In-game Name",
@@ -85,19 +170,19 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
 
         embed.add_field(
             name="🌍 Language",
-            value=self.language.value,
+            value=self.language,
             inline=False
         )
 
         embed.add_field(
             name="🏰 Guild",
-            value=self.guild.value,
+            value=self.guild,
             inline=False
         )
 
         embed.add_field(
             name="⚔️ Rank",
-            value=self.rank.value,
+            value=self.rank,
             inline=False
         )
 
@@ -146,5 +231,9 @@ class ApplyView(discord.ui.View):
         interaction: discord.Interaction,
         button: discord.ui.Button
     ):
-        await interaction.response.send_modal(ApplicationModal())
+        await interaction.response.send_message(
+    "🌍 Select your language:",
+    view=LanguageView(),
+    ephemeral=True
+)
    
