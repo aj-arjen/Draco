@@ -145,8 +145,7 @@ class ReviewView(discord.ui.View):
 
 
 class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
-  
-def __init__(self, language, guild, rank):
+    def __init__(self, language, guild, rank):
     super().__init__()
 
     self.language = language
