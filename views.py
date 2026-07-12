@@ -11,7 +11,7 @@ class ReviewView(discord.ui.View):
     style=discord.ButtonStyle.green,
     custom_id="accept_application"
 )
-async def accept(
+    async def accept(
     self,
     interaction: discord.Interaction,
     button: discord.ui.Button
