@@ -60,6 +60,28 @@ class Setup(commands.Cog):
             "✅ Application panel created.",
             ephemeral=True
         )
+        
+    @discord.app_commands.command(
+        name="roles",
+        description="Show all role IDs"
+    )
+    @discord.app_commands.default_permissions(administrator=True)
+    async def roles(self, interaction: discord.Interaction):
+
+        lines = []
+
+        for role in reversed(interaction.guild.roles):
+            lines.append(f"{role.name}: {role.id}")
+
+        text = "\n".join(lines)
+
+        if len(text) > 1900:
+            text = text[:1900]
+
+        await interaction.response.send_message(
+            f"```{text}```",
+            ephemeral=True
+        )
 
 
 async def setup(bot):
