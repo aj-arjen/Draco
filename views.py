@@ -1,5 +1,6 @@
 import discord
 
+
 class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
 
     language = discord.ui.TextInput(
@@ -37,16 +38,35 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
             color=0xC49A3A
         )
 
-        embed.add_field(name="🌍 Language", value=self.language.value, inline=False)
-        embed.add_field(name="🏰 Guild", value=self.guild.value, inline=False)
-        embed.add_field(name="⚔️ Rank", value=self.rank.value, inline=False)
-        embed.add_field(name="🎮 In-game Name", value=self.ingame_name.value, inline=False)
+        embed.add_field(
+            name="🌍 Language",
+            value=self.language.value,
+            inline=False
+        )
+
+        embed.add_field(
+            name="🏰 Guild",
+            value=self.guild.value,
+            inline=False
+        )
+
+        embed.add_field(
+            name="⚔️ Rank",
+            value=self.rank.value,
+            inline=False
+        )
+
+        embed.add_field(
+            name="🎮 In-game Name",
+            value=self.ingame_name.value,
+            inline=False
+        )
 
         embed.set_footer(
             text=f"Discord User: {interaction.user}"
         )
 
-                review_channel = discord.utils.get(
+        review_channel = discord.utils.get(
             interaction.guild.text_channels,
             name="pending-requests"
         )
@@ -64,6 +84,8 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
             "✅ Your application has been submitted!",
             ephemeral=True
         )
+
+
 class ApplyView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
@@ -80,3 +102,4 @@ class ApplyView(discord.ui.View):
         button: discord.ui.Button
     ):
         await interaction.response.send_modal(ApplicationModal())
+ 
