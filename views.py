@@ -52,7 +52,7 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
 )
 
 if review_channel is None:
-    await interaction.response.send_message(
+await interaction.response.send_message(
         "❌ The channel 'pending-requests' could not be found.",
         ephemeral=True
     )
