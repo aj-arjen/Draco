@@ -6,24 +6,24 @@ class ReviewView(discord.ui.View):
         super().__init__(timeout=None)
 
     @discord.ui.button(
-    label="Accept",
-    emoji="✅",
-    style=discord.ButtonStyle.green,
-    custom_id="accept_application"
-)
-    async def accept(
-    self,
-    interaction: discord.Interaction,
-    button: discord.ui.Button
-):
-    for item in self.children:
-        item.disabled = True
-
-    await interaction.response.edit_message(view=self)
-
-    await interaction.followup.send(
-        f"✅ Application accepted by {interaction.user.mention}"
+        label="Accept",
+        emoji="✅",
+        style=discord.ButtonStyle.green,
+        custom_id="accept_application"
     )
+    async def accept(
+        self,
+        interaction: discord.Interaction,
+        button: discord.ui.Button
+    ):
+        for item in self.children:
+            item.disabled = True
+
+        await interaction.response.edit_message(view=self)
+
+        await interaction.followup.send(
+            f"✅ Application accepted by {interaction.user.mention}"
+        )
 
     @discord.ui.button(
         label="Deny",
@@ -32,18 +32,18 @@ class ReviewView(discord.ui.View):
         custom_id="deny_application"
     )
     async def deny(
-    self,
-    interaction: discord.Interaction,
-    button: discord.ui.Button
-):
-    for item in self.children:
-        item.disabled = True
+        self,
+        interaction: discord.Interaction,
+        button: discord.ui.Button
+    ):
+        for item in self.children:
+            item.disabled = True
 
-    await interaction.response.edit_message(view=self)
+        await interaction.response.edit_message(view=self)
 
-    await interaction.followup.send(
-        f"❌ Application denied by {interaction.user.mention}"
-    )
+        await interaction.followup.send(
+            f"❌ Application denied by {interaction.user.mention}"
+        )
 
 
 class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
