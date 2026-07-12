@@ -46,19 +46,19 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
             text=f"Discord User: {interaction.user}"
         )
 
-        review_channel = discord.utils.get(
-    interaction.guild.text_channels,
-    name="pending-requests"
-)
+                review_channel = discord.utils.get(
+            interaction.guild.text_channels,
+            name="pending-requests"
+        )
 
-if review_channel is None:
-await interaction.response.send_message(
-        "❌ The channel 'pending-requests' could not be found.",
-        ephemeral=True
-    )
-    return
+        if review_channel is None:
+            await interaction.response.send_message(
+                "❌ The channel 'pending-requests' could not be found.",
+                ephemeral=True
+            )
+            return
 
-await review_channel.send(embed=embed)
+        await review_channel.send(embed=embed)
 
         await interaction.response.send_message(
             "✅ Your application has been submitted!",
