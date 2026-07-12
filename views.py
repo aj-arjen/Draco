@@ -66,10 +66,7 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
             text=f"Discord User: {interaction.user}"
         )
 
-        review_channel = discord.utils.get(
-            interaction.guild.text_channels,
-            name="pending-requests"
-        )
+        review_channel = interaction.guild.get_channel(1525524957042573312)
 
         if review_channel is None:
             await interaction.response.send_message(
