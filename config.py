@@ -29,19 +29,19 @@ GUILD_ROLES = {
     "Other": 666666666666666666,
 }
 MEMBER_ROLES = {
-    "DEN": ID_van_DEN_member_rol,
-    "ACE": ID_van_ACE_member_rol,
-    "NVN": ID_van_NVN_member_rol,
-    "OBS": ID_van_OBS_member_rol,
-    "OFA": ID_van_OFA_member_rol,
-    "Other": ID_van_Other_member_rol,
+    "DEN": 0,
+    "ACE": 0,
+    "NVN": 0,
+    "OBS": 0,
+    "OFA": 0,
+    "Other": 0,
 }
 
 LEADER_ROLES = {
-    "DEN": 777777777777777777,
-    "ACE": 888888888888888888,
-    "NVN": 999999999999999999,
-    "OBS": 101010101010101010,
-    "OFA": 202020202020202020,
-    "Other": 303030303030303030,
+    "DEN": 0,
+    "ACE": 0,
+    "NVN": 0,
+    "OBS": 0,
+    "OFA": 0,
+    "Other": 0,
 }
