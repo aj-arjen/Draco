@@ -1,5 +1,14 @@
 import discord
 
+from config import (
+    VERIFIED_ROLE,
+    PENDING_ROLE,
+    LANGUAGE_ROLES,
+    GUILD_ROLES,
+    MEMBER_ROLES,
+    LEADER_ROLES,
+)
+
 
 class LanguageView(discord.ui.View):
     def __init__(self):
@@ -100,8 +109,13 @@ class RankView(discord.ui.View):
 )
 
 class ReviewView(discord.ui.View):
-    def __init__(self):
-        super().__init__(timeout=None)
+    def __init__(self, user_id, language, guild, rank):
+    super().__init__(timeout=None)
+
+    self.user_id = user_id
+    self.language = language
+    self.guild = guild
+    self.rank = rank
 
     @discord.ui.button(
         label="Accept",
@@ -118,6 +132,28 @@ class ReviewView(discord.ui.View):
             item.disabled = True
 
         await interaction.response.edit_message(view=self)
+        member = interaction.guild.get_member(self.user_id)
+        verified_role = interaction.guild.get_role(VERIFIED_ROLE)
+
+if member and verified_role:
+    await member.add_roles(verified_role)
+
+guild_role = interaction.guild.get_role(GUILD_ROLES[self.guild])
+
+if self.rank == "Leader":
+    rank_role = interaction.guild.get_role(
+        LEADER_ROLES[self.guild]
+    )
+else:
+    rank_role = interaction.guild.get_role(
+        MEMBER_ROLES[self.guild]
+    )
+    
+if member and guild_role:
+    await member.add_roles(guild_role)
+    
+if member and rank_role:
+    await member.add_roles(rank_role)
 
         await interaction.followup.send(
             f"✅ Application accepted by {interaction.user.mention}"
@@ -206,7 +242,12 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
 
         await review_channel.send(
             embed=embed,
-            view=ReviewView()
+            view=ReviewView(
+    interaction.user.id,
+    self.language,
+    self.guild,
+    self.rank
+)
         )
 
         await interaction.response.send_message(
