@@ -155,7 +155,7 @@ if member and guild_role:
 if member and rank_role:
     await member.add_roles(rank_role)
 
-        await interaction.followup.send(
+    await interaction.followup.send(
             f"✅ Application accepted by {interaction.user.mention}"
         )
 
