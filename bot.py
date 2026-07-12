@@ -19,6 +19,7 @@ class Draco(commands.Bot):
         )
 
     async def setup_hook(self):
+        await self.load_extension("setup")
         await self.tree.sync()
     async def on_ready(self):
 
