@@ -70,11 +70,10 @@ class GuildView(discord.ui.View):
         await interaction.response.edit_message(
             content="⭐ Select your rank:",
             view=RankView(
-            self.language,
-            select.values[0]
-    )
-)
-    
+                self.language,
+                select.values[0]
+            )
+        )
 class RankView(discord.ui.View):
     def __init__(self, language, guild):
         super().__init__(timeout=300)
@@ -101,13 +100,12 @@ class RankView(discord.ui.View):
         select: discord.ui.Select
     ):
         await interaction.response.send_modal(
-    ApplicationModal(
-        language=self.language,
-        guild=self.guild,
-        rank=select.values[0]
-    )
-)
-
+            ApplicationModal(
+                language=self.language,
+                guild=self.guild,
+                rank=select.values[0]
+            )
+        )
 class ReviewView(discord.ui.View):
     def __init__(self, user_id, language, guild, rank):
         super().__init__(timeout=None)
@@ -132,28 +130,28 @@ class ReviewView(discord.ui.View):
             item.disabled = True
 
         await interaction.response.edit_message(view=self)
+
         member = interaction.guild.get_member(self.user_id)
         verified_role = interaction.guild.get_role(VERIFIED_ROLE)
-
-    if member and verified_role:
-        await member.add_roles(verified_role)
-
         guild_role = interaction.guild.get_role(GUILD_ROLES[self.guild])
 
-    if self.rank == "leader":
-        rank_role = interaction.guild.get_role(
-            LEADER_ROLES[self.guild]
-        )
-    else:
-        rank_role = interaction.guild.get_role(
-        MEMBER_ROLES[self.guild]
-    )
-    
-    if member and guild_role:
-        await member.add_roles(guild_role)
-    
-    if member and rank_role:
-        await member.add_roles(rank_role)
+        if self.rank == "leader":
+            rank_role = interaction.guild.get_role(
+                LEADER_ROLES[self.guild]
+            )
+        else:
+            rank_role = interaction.guild.get_role(
+                MEMBER_ROLES[self.guild]
+            )
+
+        if member and verified_role:
+            await member.add_roles(verified_role)
+
+        if member and guild_role:
+            await member.add_roles(guild_role)
+
+        if member and rank_role:
+            await member.add_roles(rank_role)
 
         await interaction.followup.send(
             f"✅ Application accepted by {interaction.user.mention}"
@@ -178,8 +176,6 @@ class ReviewView(discord.ui.View):
         await interaction.followup.send(
             f"❌ Application denied by {interaction.user.mention}"
         )
-
-
 class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
     def __init__(self, language, guild, rank):
         super().__init__()
@@ -187,7 +183,6 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
         self.language = language
         self.guild = guild
         self.rank = rank
-
 
     ingame_name = discord.ui.TextInput(
         label="In-game Name",
@@ -243,11 +238,11 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
         await review_channel.send(
             embed=embed,
             view=ReviewView(
-    interaction.user.id,
-    self.language,
-    self.guild,
-    self.rank
-)
+                interaction.user.id,
+                self.language,
+                self.guild,
+                self.rank
+            )
         )
 
         await interaction.response.send_message(
@@ -272,8 +267,7 @@ class ApplyView(discord.ui.View):
         button: discord.ui.Button
     ):
         await interaction.response.send_message(
-    "🌍 Select your language:",
-    view=LanguageView(),
-    ephemeral=True
-)
-   
+            "🌍 Select your language:",
+            view=LanguageView(),
+            ephemeral=True
+        )
