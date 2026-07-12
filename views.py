@@ -110,12 +110,12 @@ class RankView(discord.ui.View):
 
 class ReviewView(discord.ui.View):
     def __init__(self, user_id, language, guild, rank):
-    super().__init__(timeout=None)
+        super().__init__(timeout=None)
 
-    self.user_id = user_id
-    self.language = language
-    self.guild = guild
-    self.rank = rank
+        self.user_id = user_id
+        self.language = language
+        self.guild = guild
+        self.rank = rank
 
     @discord.ui.button(
         label="Accept",
