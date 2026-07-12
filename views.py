@@ -75,10 +75,49 @@ class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
             )
             return
 
-        await review_channel.send(embed=embed)
+        await review_channel.send(
+    embed=embed,
+    view=ReviewView()
+)
 
         await interaction.response.send_message(
             "✅ Your application has been submitted!",
+            ephemeral=True
+        )
+        
+        class ReviewView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=None)
+
+    @discord.ui.button(
+        label="Accept",
+        emoji="✅",
+        style=discord.ButtonStyle.green,
+        custom_id="accept_application"
+    )
+    async def accept(
+        self,
+        interaction: discord.Interaction,
+        button: discord.ui.Button
+    ):
+        await interaction.response.send_message(
+            "✅ Application accepted! (Temporary test)",
+            ephemeral=True
+        )
+
+    @discord.ui.button(
+        label="Deny",
+        emoji="❌",
+        style=discord.ButtonStyle.red,
+        custom_id="deny_application"
+    )
+    async def deny(
+        self,
+        interaction: discord.Interaction,
+        button: discord.ui.Button
+    ):
+        await interaction.response.send_message(
+            "❌ Application denied! (Temporary test)",
             ephemeral=True
         )
 
