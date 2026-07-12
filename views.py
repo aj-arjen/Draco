@@ -146,11 +146,11 @@ class ReviewView(discord.ui.View):
 
 class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
     def __init__(self, language, guild, rank):
-    super().__init__()
+        super().__init__()
 
-    self.language = language
-    self.guild = guild
-    self.rank = rank  
+        self.language = language
+        self.guild = guild
+        self.rank = rank
 
 
     ingame_name = discord.ui.TextInput(
