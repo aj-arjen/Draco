@@ -141,10 +141,10 @@ class ReviewView(discord.ui.View):
         guild_role = interaction.guild.get_role(GUILD_ROLES[self.guild])
 
     if self.rank == "leader":
-    rank_role = interaction.guild.get_role(
-        LEADER_ROLES[self.guild]
-    )
-else:
+        rank_role = interaction.guild.get_role(
+            LEADER_ROLES[self.guild]
+        )
+    else:
     rank_role = interaction.guild.get_role(
         MEMBER_ROLES[self.guild]
     )
