@@ -297,48 +297,48 @@ class ReviewView(discord.ui.View):
         except discord.Forbidden:
             pass
 
-    log_channel = interaction.guild.get_channel(BOT_LOG_CHANNEL)
-    print(f"BOT_LOG_CHANNEL = {BOT_LOG_CHANNEL}")
-    print(f"log_channel = {log_channel}")
+            log_channel = interaction.guild.get_channel(BOT_LOG_CHANNEL)
+            print(f"BOT_LOG_CHANNEL = {BOT_LOG_CHANNEL}")
+            print(f"log_channel = {log_channel}")
 
-    if log_channel:
+            if log_channel:
 
-        log_embed = discord.Embed(
-            title="🟢 Application Accepted",
-            color=discord.Color.green()
-       )
+                log_embed = discord.Embed(
+                    title="🟢 Application Accepted",
+                    color=discord.Color.green()
+                )
 
-        log_embed.add_field(
-            name="👤 Applicant",
-            value=member.mention,
-            inline=False
-        )
+                log_embed.add_field(
+                    name="👤 Applicant",
+                    value=member.mention,
+                    inline=False
+                )
 
-        log_embed.add_field(
-            name="🎮 In-game Name",
-            value=self.ign,
-            inline=True
-        )
+                log_embed.add_field(
+                    name="🎮 In-game Name",
+                    value=self.ign,
+                    inline=True
+                )
 
-        log_embed.add_field(
-            name="🏰 Guild",
-            value=self.guild,
-            inline=True
-        )
+                log_embed.add_field(
+                    name="🏰 Guild",
+                    value=self.guild,
+                    inline=True
+                )
 
-        log_embed.add_field(
-            name="⭐ Rank",
-            value=self.rank.title(),
-            inline=True
-        )
+                log_embed.add_field(
+                    name="⭐ Rank",
+                    value=self.rank.title(),
+                    inline=True
+                )
 
-        log_embed.add_field(
-            name="👮 Approved by",
-            value=interaction.user.mention,
-            inline=False
-        )
+                log_embed.add_field(
+                    name="👮 Approved by",
+                    value=interaction.user.mention,
+                    inline=False
+                )
 
-        log_embed.timestamp = discord.utils.utcnow()
+                log_embed.timestamp = discord.utils.utcnow()
 
     await log_channel.send(embed=log_embed)
 
