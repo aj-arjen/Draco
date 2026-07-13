@@ -122,9 +122,9 @@ class ReviewView(discord.ui.View):
         custom_id="accept_application"
     )
     async def accept(
-    self,
-    interaction: discord.Interaction,
-    button: discord.ui.Button
+        self,
+        interaction: discord.Interaction,
+        button: discord.ui.Button
 ):
     for item in self.children:
         item.disabled = True
