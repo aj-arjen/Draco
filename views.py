@@ -115,171 +115,115 @@ class ReviewView(discord.ui.View):
         self.guild = guild
         self.rank = rank
 
-@discord.ui.button(
-    label="Accept",
-    emoji="✅",
-    style=discord.ButtonStyle.green,
-    custom_id="accept_application"
-)
-async def accept(
-    self,
-    interaction: discord.Interaction,
-    button: discord.ui.Button
-):
-    for item in self.children:
-        item.disabled = True
-
-    await interaction.response.edit_message(view=self)
-
-    member = interaction.guild.get_member(self.user_id)
-
-    if member is None:
-        await interaction.followup.send(
-            "❌ Member could not be found."
-        )
-        return
-
-    verified_role = interaction.guild.get_role(VERIFIED_ROLE)
-    pending_role = interaction.guild.get_role(PENDING_ROLE)
-
-    guild_role = interaction.guild.get_role(
-        GUILD_ROLES[self.guild]
-    )
-
-    language_role = interaction.guild.get_role(
-        LANGUAGE_ROLES[self.language]
-    )
-
-    if self.rank == "leader":
-        rank_role = interaction.guild.get_role(
-            LEADER_ROLES[self.guild]
-        )
-    else:
-        rank_role = interaction.guild.get_role(
-            MEMBER_ROLES[self.guild]
-        )
-
-    if verified_role:
-        await member.add_roles(verified_role)
-
-    if pending_role:
-        await member.remove_roles(pending_role)
-
-    if guild_role:
-        await member.add_roles(guild_role)
-
-    if language_role:
-        await member.add_roles(language_role)
-
-    if rank_role:
-        await member.add_roles(rank_role)
-
-    try:
-        await member.send(
-            f"🎉 Congratulations!\n\n"
-            f"Your application for **{self.guild}** has been approved.\n\n"
-            f"Welcome to **Dragons Den**! 🐉"
-        )
-    except discord.Forbidden:
-        pass
-
-    await interaction.followup.send(
-        f"✅ Application accepted by {interaction.user.mention}"
-    )
-
     @discord.ui.button(
-        label="Deny",
-        emoji="❌",
-        style=discord.ButtonStyle.red,
-        custom_id="deny_application"
+        label="Accept",
+        emoji="✅",
+        style=discord.ButtonStyle.green,
+        custom_id="accept_application"
     )
-    async def deny(
+    async def accept(
         self,
         interaction: discord.Interaction,
         button: discord.ui.Button
     ):
+
         for item in self.children:
             item.disabled = True
 
         await interaction.response.edit_message(view=self)
 
-        await interaction.followup.send(
-            f"❌ Application denied by {interaction.user.mention}"
-        )
-class ApplicationModal(discord.ui.Modal, title="Dragons Den Application"):
-    def __init__(self, language, guild, rank):
-        super().__init__()
+        member = interaction.guild.get_member(self.user_id)
 
-        self.language = language
-        self.guild = guild
-        self.rank = rank
-
-    ingame_name = discord.ui.TextInput(
-        label="In-game Name",
-        placeholder="Enter your in-game name...",
-        required=True,
-        max_length=30
-    )
-
-    async def on_submit(self, interaction: discord.Interaction):
-
-        embed = discord.Embed(
-            title="📋 New Application",
-            color=0xC49A3A
-        )
-
-        embed.add_field(
-            name="🌍 Language",
-            value=self.language,
-            inline=False
-        )
-
-        embed.add_field(
-            name="🏰 Guild",
-            value=self.guild,
-            inline=False
-        )
-
-        embed.add_field(
-            name="⚔️ Rank",
-            value=self.rank,
-            inline=False
-        )
-
-        embed.add_field(
-            name="🎮 In-game Name",
-            value=self.ingame_name.value,
-            inline=False
-        )
-
-        embed.set_footer(
-            text=f"Discord User: {interaction.user}"
-        )
-
-        review_channel = interaction.guild.get_channel(1525524957042573312)
-
-        if review_channel is None:
-            await interaction.response.send_message(
-                "❌ The review channel could not be found.",
-                ephemeral=True
+        if member is None:
+            await interaction.followup.send(
+                "❌ Member could not be found."
             )
             return
 
-        await review_channel.send(
-            embed=embed,
-            view=ReviewView(
-                interaction.user.id,
-                self.language,
-                self.guild,
-                self.rank
+        verified_role = interaction.guild.get_role(VERIFIED_ROLE)
+        pending_role = interaction.guild.get_role(PENDING_ROLE)
+
+        guild_role = interaction.guild.get_role(
+            GUILD_ROLES[self.guild]
+        )
+
+        language_role = interaction.guild.get_role(
+            LANGUAGE_ROLES[self.language]
+        )
+
+        if self.rank == "leader":
+            rank_role = interaction.guild.get_role(
+                LEADER_ROLES[self.guild]
             )
+        else:
+            rank_role = interaction.guild.get_role(
+                MEMBER_ROLES[self.guild]
+            )
+
+        if verified_role:
+            await member.add_roles(verified_role)
+
+        if pending_role:
+            await member.remove_roles(pending_role)
+
+        if guild_role:
+            await member.add_roles(guild_role)
+
+        if language_role:
+            await member.add_roles(language_role)
+
+        if rank_role:
+            await member.add_roles(rank_role)
+
+        try:
+            await member.send(
+                f"🎉 Congratulations!\n\n"
+                f"Your application for **{self.guild}** has been approved.\n\n"
+                f"Welcome to **Dragons Den**! 🐉"
+            )
+        except discord.Forbidden:
+            pass
+
+        await interaction.followup.send(
+            f"✅ Application accepted by {interaction.user.mention}"
         )
 
-        await interaction.response.send_message(
-            "✅ Your application has been submitted!",
-            ephemeral=True
-        )
+    @discord.ui.button(
+        label="Decline",
+        emoji="❌",
+        style=discord.ButtonStyle.red,
+        custom_id="decline_application"
+    )
+    async def decline(
+        self,
+        interaction: discord.Interaction,
+        button: discord.ui.Button
+    ):
 
+        for item in self.children:
+            item.disabled = True
+
+        await interaction.response.edit_message(view=self)
+
+        member = interaction.guild.get_member(self.user_id)
+
+        if member:
+            pending_role = interaction.guild.get_role(PENDING_ROLE)
+
+            if pending_role:
+                await member.remove_roles(pending_role)
+
+            try:
+                await member.send(
+                    "❌ Unfortunately your application has been declined.\n\n"
+                    "If you believe this is a mistake, please contact a Guild Leader."
+                )
+            except discord.Forbidden:
+                pass
+
+        await interaction.followup.send(
+            f"❌ Application declined by {interaction.user.mention}"
+        )
 
 class ApplyView(discord.ui.View):
     def __init__(self):
