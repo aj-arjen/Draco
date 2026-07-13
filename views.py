@@ -228,6 +228,8 @@ class ReviewView(discord.ui.View):
             item.disabled = True
 
         await interaction.response.edit_message(view=self)
+        print("=== ACCEPT PRESSED ===")
+        print(f"BOT_LOG_CHANNEL = {BOT_LOG_CHANNEL}")
 
         member = interaction.guild.get_member(self.user_id)
 
