@@ -9,8 +9,10 @@ from bot import Draco
 from settings import TOKEN
 from views import ApplyView
 from giftcodes import GiftCodeView
+from giftcode_watcher import GiftCodeWatcher
 
 bot = Draco()
+giftcode_watcher = GiftCodeWatcher(bot)
 
 
 @bot.tree.command(
@@ -82,4 +84,7 @@ def run_web():
     app.run(host="0.0.0.0", port=port)
 
 Thread(target=run_web).start()
+
+giftcode_watcher.start()
+
 bot.run(TOKEN)
