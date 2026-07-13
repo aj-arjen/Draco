@@ -115,23 +115,23 @@ class ReviewView(discord.ui.View):
         self.guild = guild
         self.rank = rank
 
-    @discord.ui.button(
-        label="Accept",
-        emoji="✅",
-        style=discord.ButtonStyle.green,
-        custom_id="accept_application"
-    )
-    async def accept(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button
+@discord.ui.button(
+    label="Accept",
+    emoji="✅",
+    style=discord.ButtonStyle.green,
+    custom_id="accept_application"
+)
+async def accept(
+    self,
+    interaction: discord.Interaction,
+    button: discord.ui.Button
 ):
-        for item in self.children:
-            item.disabled = True
+    for item in self.children:
+        item.disabled = True
 
-        await interaction.response.edit_message(view=self)
+    await interaction.response.edit_message(view=self)
 
-        member = interaction.guild.get_member(self.user_id)
+    member = interaction.guild.get_member(self.user_id)
 
     if member is None:
         await interaction.followup.send(
