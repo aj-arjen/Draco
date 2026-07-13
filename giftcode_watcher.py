@@ -7,7 +7,7 @@ class GiftCodeWatcher:
         self.bot = bot
         self.last_code = None
 
-    @tasks.loop(minutes=30)
+    @tasks.loop(minutes=1)
     async def check_giftcodes(self):
 
         print("🔍 Checking for new gift codes...")
