@@ -21,7 +21,6 @@ bot = Draco()
     name="gifttest",
     description="Post a test gift code."
 )
-@discord.app_commands.default_permissions(administrator=True)
 async def gifttest(interaction: discord.Interaction):
 
     code = "DRACO2026"
