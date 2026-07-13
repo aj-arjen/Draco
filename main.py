@@ -12,7 +12,16 @@ from giftcodes import GiftCodeView
 from giftcode_watcher import GiftCodeWatcher
 
 bot = Draco()
+
 giftcode_watcher = GiftCodeWatcher(bot)
+
+@bot.event
+async def on_ready():
+
+    if not giftcode_watcher.check_giftcodes.is_running():
+        giftcode_watcher.start()
+
+    print(f"Logged in as {bot.user}")
 
 
 @bot.tree.command(
@@ -35,7 +44,6 @@ async def gifttest(interaction: discord.Interaction):
 
     code = "DRACO2026"
 
-    ...
 
     embed = discord.Embed(
         title="🎁 New Top Heroes Gift Code",
@@ -66,12 +74,6 @@ async def gifttest(interaction: discord.Interaction):
         "✅ Gift code posted.",
         ephemeral=True
     )
-async def ping(interaction: discord.Interaction):
-
-    await interaction.response.send_message(
-        "🏓 Pong! Draco is online.",
-        ephemeral=True
-    )
 
 app = Flask(__name__)
 
@@ -84,7 +86,5 @@ def run_web():
     app.run(host="0.0.0.0", port=port)
 
 Thread(target=run_web).start()
-
-giftcode_watcher.start()
 
 bot.run(TOKEN)
