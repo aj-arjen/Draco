@@ -17,6 +17,14 @@ bot = Draco()
     name="ping",
     description="Check if Draco is online."
 )
+async def ping(interaction: discord.Interaction):
+
+    await interaction.response.send_message(
+        "🏓 Pong! Draco is online.",
+        ephemeral=True
+    )
+
+
 @bot.tree.command(
     name="gifttest",
     description="Post a test gift code."
@@ -24,6 +32,8 @@ bot = Draco()
 async def gifttest(interaction: discord.Interaction):
 
     code = "DRACO2026"
+
+    ...
 
     embed = discord.Embed(
         title="🎁 New Top Heroes Gift Code",
