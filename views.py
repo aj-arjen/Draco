@@ -297,9 +297,11 @@ class ReviewView(discord.ui.View):
         except discord.Forbidden:
             pass
 
-log_channel = interaction.guild.get_channel(BOT_LOG_CHANNEL)
+    log_channel = interaction.guild.get_channel(BOT_LOG_CHANNEL)
+    print(f"BOT_LOG_CHANNEL = {BOT_LOG_CHANNEL}")
+    print(f"log_channel = {log_channel}")
 
-if log_channel:
+    if log_channel:
 
     log_embed = discord.Embed(
         title="🟢 Application Accepted",
