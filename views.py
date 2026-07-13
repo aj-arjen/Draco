@@ -126,12 +126,12 @@ class ReviewView(discord.ui.View):
         interaction: discord.Interaction,
         button: discord.ui.Button
 ):
-    for item in self.children:
-        item.disabled = True
+        for item in self.children:
+            item.disabled = True
 
-    await interaction.response.edit_message(view=self)
+        await interaction.response.edit_message(view=self)
 
-    member = interaction.guild.get_member(self.user_id)
+        member = interaction.guild.get_member(self.user_id)
 
     if member is None:
         await interaction.followup.send(
