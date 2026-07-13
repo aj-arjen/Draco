@@ -3,6 +3,7 @@ import discord
 from config import (
     VERIFIED_ROLE,
     PENDING_ROLE,
+    BOT_LOG_CHANNEL,
     LANGUAGE_ROLES,
     GUILD_ROLES,
     MEMBER_ROLES,
@@ -295,6 +296,49 @@ class ReviewView(discord.ui.View):
             )
         except discord.Forbidden:
             pass
+
+log_channel = interaction.guild.get_channel(BOT_LOG_CHANNEL)
+
+if log_channel:
+
+    log_embed = discord.Embed(
+        title="🟢 Application Accepted",
+        color=discord.Color.green()
+    )
+
+    log_embed.add_field(
+        name="👤 Applicant",
+        value=member.mention,
+        inline=False
+    )
+
+    log_embed.add_field(
+        name="🎮 In-game Name",
+        value=self.ign,
+        inline=True
+    )
+
+    log_embed.add_field(
+        name="🏰 Guild",
+        value=self.guild,
+        inline=True
+    )
+
+    log_embed.add_field(
+        name="⭐ Rank",
+        value=self.rank.title(),
+        inline=True
+    )
+
+    log_embed.add_field(
+        name="👮 Approved by",
+        value=interaction.user.mention,
+        inline=False
+    )
+
+    log_embed.timestamp = discord.utils.utcnow()
+
+    await log_channel.send(embed=log_embed)
 
         await interaction.followup.send(
             f"✅ Application accepted by {interaction.user.mention}"
