@@ -122,40 +122,70 @@ class ReviewView(discord.ui.View):
         custom_id="accept_application"
     )
     async def accept(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button
-    ):
-        for item in self.children:
-            item.disabled = True
+    self,
+    interaction: discord.Interaction,
+    button: discord.ui.Button
+):
+    for item in self.children:
+        item.disabled = True
 
-        await interaction.response.edit_message(view=self)
+    await interaction.response.edit_message(view=self)
 
-        member = interaction.guild.get_member(self.user_id)
-        verified_role = interaction.guild.get_role(VERIFIED_ROLE)
-        guild_role = interaction.guild.get_role(GUILD_ROLES[self.guild])
+    member = interaction.guild.get_member(self.user_id)
 
-        if self.rank == "leader":
-            rank_role = interaction.guild.get_role(
-                LEADER_ROLES[self.guild]
-            )
-        else:
-            rank_role = interaction.guild.get_role(
-                MEMBER_ROLES[self.guild]
-            )
-
-        if member and verified_role:
-            await member.add_roles(verified_role)
-
-        if member and guild_role:
-            await member.add_roles(guild_role)
-
-        if member and rank_role:
-            await member.add_roles(rank_role)
-
+    if member is None:
         await interaction.followup.send(
-            f"✅ Application accepted by {interaction.user.mention}"
+            "❌ Member could not be found."
         )
+        return
+
+    verified_role = interaction.guild.get_role(VERIFIED_ROLE)
+    pending_role = interaction.guild.get_role(PENDING_ROLE)
+
+    guild_role = interaction.guild.get_role(
+        GUILD_ROLES[self.guild]
+    )
+
+    language_role = interaction.guild.get_role(
+        LANGUAGE_ROLES[self.language]
+    )
+
+    if self.rank == "leader":
+        rank_role = interaction.guild.get_role(
+            LEADER_ROLES[self.guild]
+        )
+    else:
+        rank_role = interaction.guild.get_role(
+            MEMBER_ROLES[self.guild]
+        )
+
+    if verified_role:
+        await member.add_roles(verified_role)
+
+    if pending_role:
+        await member.remove_roles(pending_role)
+
+    if guild_role:
+        await member.add_roles(guild_role)
+
+    if language_role:
+        await member.add_roles(language_role)
+
+    if rank_role:
+        await member.add_roles(rank_role)
+
+    try:
+        await member.send(
+            f"🎉 Congratulations!\n\n"
+            f"Your application for **{self.guild}** has been approved.\n\n"
+            f"Welcome to **Dragons Den**! 🐉"
+        )
+    except discord.Forbidden:
+        pass
+
+    await interaction.followup.send(
+        f"✅ Application accepted by {interaction.user.mention}"
+    )
 
     @discord.ui.button(
         label="Deny",
