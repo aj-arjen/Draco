@@ -340,7 +340,7 @@ class ReviewView(discord.ui.View):
 
                 log_embed.timestamp = discord.utils.utcnow()
 
-    await log_channel.send(embed=log_embed)
+                await log_channel.send(embed=log_embed)
 
         await interaction.followup.send(
             f"✅ Application accepted by {interaction.user.mention}"
