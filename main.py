@@ -7,9 +7,9 @@ import os
 
 from bot import Draco
 from settings import TOKEN
-from views import ApplyView
+from views.views import ApplyView
 from giftcodes import post_giftcode
-from giftcode_watcher import GiftCodeWatcher
+from modules.giftcode_watcher import GiftCodeWatcher
 from modules.redalert import RedAlertView
 
 bot = Draco()
