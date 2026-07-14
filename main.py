@@ -1,4 +1,4 @@
-import discord
+)import discord
 from discord.ext import commands
 
 from flask import Flask
@@ -10,10 +10,12 @@ from settings import TOKEN
 from views import ApplyView
 from giftcodes import post_giftcode
 from giftcode_watcher import GiftCodeWatcher
+from redalert import RedAlertView
 
 bot = Draco()
 
 giftcode_watcher = GiftCodeWatcher(bot)
+
 
 @bot.event
 async def on_ready():
@@ -54,15 +56,32 @@ async def gifttest(interaction: discord.Interaction):
         ephemeral=True
     )
 
+
+@bot.tree.command(
+    name="alert",
+    description="Create a Draco Red Alert."
+)
+async def alert(interaction: discord.Interaction):
+
+    await interaction.response.send_message(
+        "🚨 Select the alert type:",
+        view=RedAlertView(),
+        ephemeral=True
+    )
+
+
 app = Flask(__name__)
+
 
 @app.route("/")
 def home():
     return "DracoBot is running!"
 
+
 def run_web():
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
 
 Thread(target=run_web).start()
 
