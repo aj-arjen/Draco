@@ -22,7 +22,6 @@ class Draco(commands.Bot):
         await self.load_extension("setup")
         await self.load_extension("modules.draco")
         await self.load_extension("modules.command_center")
-        await self.load_extension("modules.command_center")
         await self.tree.sync()
     async def on_ready(self):
 
