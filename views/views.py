@@ -1,6 +1,6 @@
 import discord
 
-from config import (
+from config.config import (
     VERIFIED_ROLE,
     PENDING_ROLE,
     BOT_LOG_CHANNEL,
