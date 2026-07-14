@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from views import ApplyView
+from views.views import ApplyView
 
 
 class Setup(commands.Cog):
