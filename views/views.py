@@ -5,8 +5,7 @@ from config.config import (
     PENDING_ROLE,
     BOT_LOG_CHANNEL,
     LANGUAGE_ROLES,
-    GUILD_ROLES,
-    MEMBER_ROLES,
+    GUILD_MEMBER_ROLES,
     LEADER_ROLES,
 )
 
