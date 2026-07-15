@@ -6,6 +6,12 @@ class CommandCenterSelect(discord.ui.Select):
     def __init__(self):
 
         options = [
+          
+            discord.SelectOption(
+                label="Translation",
+                emoji="💬",
+                description="Translate messages"
+),
 
             discord.SelectOption(
                 label="Gift Codes",
@@ -74,6 +80,28 @@ class CommandCenterSelect(discord.ui.Select):
             embed.set_image(
                 url="attachment://draco_gift.png"
             )
+            
+        elif choice == "Translation":
+
+            embed.title = "💬 Translation"
+
+            embed.description = (
+        "💬 **Translate Messages**\n"
+        "Use `/translate` on any message to instantly read it in your own language.\n\n"
+
+        "🌎 Connect with players from all over the world.\n\n"
+
+        "💡 More translation features are hopefully coming in the future."
+    )
+
+            file = discord.File(
+        "assets/reactions/draco_help.png",
+                filename="draco_help.png"
+    )
+
+            embed.set_image(
+        url="attachment://draco_help.png"
+    )
 
         elif choice == "Applications":
 
