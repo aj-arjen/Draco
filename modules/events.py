@@ -80,7 +80,7 @@ def get_user_timezone(user_id):
 
     data = load_timezones()
 
-    return data.get(str(user_id)
+    return data.get(str(user_id))
 # ==========================================================
 # TIME HELPERS
 # ==========================================================
@@ -167,7 +167,7 @@ class Events(commands.Cog):
             events = load_events()
 
             event_id = len(events) + 1
-                        events.append(
+                events.append(
                 {
                     "id": event_id,
                     "guild": guild_name,
