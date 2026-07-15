@@ -27,6 +27,7 @@ TIMEZONES = [
 ]
 
 
+
 def load_timezones():
 
     if not os.path.exists(TIMEZONE_FILE):
@@ -34,7 +35,6 @@ def load_timezones():
 
     with open(TIMEZONE_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
-
 
 def save_timezones(data):
 
