@@ -24,6 +24,7 @@ class Victory(commands.Cog):
                 ephemeral=True
             )
             return
+          await interaction.response.defer(ephemeral=True)
 
         channel = self.bot.get_channel(GENERAL_CHANNEL_ID)
 
@@ -55,14 +56,15 @@ class Victory(commands.Cog):
             filename="draco_victory.mp4"
 )
 
-        await channel.send(file=file)
+        await channel.send(
+            embed=embed,
+            file=file
+)
 
-        await channel.send(embed=embed)
-
-        await interaction.response.send_message(
-            "🏆 Victory announcement posted successfully!",
+        await interaction.followup.send(
+    "🏆 Victory announcement posted successfully!",
             ephemeral=True
-        )
+)
 
 
 async def setup(bot):
