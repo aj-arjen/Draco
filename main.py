@@ -58,7 +58,6 @@ async def ping(interaction: discord.Interaction):
 
 from discord import app_commands
 
-
 @bot.tree.command(
     name="giftcode",
     description="Post a new Top Heroes gift code."
@@ -72,34 +71,34 @@ async def giftcode(
 ):
 
     print("GIFTCODE COMMAND CALLED")
-    
+
     verified_role = interaction.guild.get_role(VERIFIED_ROLE_ID)
 
-if verified_role not in interaction.user.roles:
-    await interaction.response.send_message(
-        "❌ You don't have permission to use this command.",
-        ephemeral=True
-    )
-    return
+    if verified_role not in interaction.user.roles:
+        await interaction.response.send_message(
+            "❌ You don't have permission to use this command.",
+            ephemeral=True
+        )
+        return
 
     channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
 
-if channel is None:
-    await interaction.response.send_message(
-        "❌ Gift code channel not found.",
-        ephemeral=True
-    )
-    return
+    if channel is None:
+        await interaction.response.send_message(
+            "❌ Gift code channel not found.",
+            ephemeral=True
+        )
+        return
 
     await post_giftcode(
         channel,
         code
-)
+    )
 
     await interaction.response.send_message(
         "✅ Gift code posted successfully!",
         ephemeral=True
-)
+    )
 
 
 app = Flask(__name__)
