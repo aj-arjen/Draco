@@ -75,46 +75,31 @@ async def giftcode(
     
     verified_role = interaction.guild.get_role(VERIFIED_ROLE_ID)
 
-        if verified_role not in interaction.user.roles:
+if verified_role not in interaction.user.roles:
     await interaction.response.send_message(
         "❌ You don't have permission to use this command.",
         ephemeral=True
     )
     return
 
-    channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
+channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
 
-        if channel is None:
-            await interaction.response.send_message(
+if channel is None:
+    await interaction.response.send_message(
         "❌ Gift code channel not found.",
         ephemeral=True
     )
-            return
+    return
 
 await post_giftcode(
     channel,
     code
 )
 
-    await interaction.response.send_message(
-        "✅ Gift code posted successfully!",
-        ephemeral=True
-    )
-
-
-@bot.tree.command(
-    name="alert",
-    description="Create a Draco Red Alert."
+await interaction.response.send_message(
+    "✅ Gift code posted successfully!",
+    ephemeral=True
 )
-async def alert(interaction: discord.Interaction):
-
-    print("ALERT COMMAND CALLED")
-
-    await interaction.response.send_message(
-        "🚨 Select the alert type:",
-        view=RedAlertView(),
-        ephemeral=True
-    )
 
 
 app = Flask(__name__)
