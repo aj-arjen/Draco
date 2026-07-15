@@ -51,9 +51,9 @@ class Victory(commands.Cog):
         )
 
         file = discord.File(
-            "assets/animations/draco_victory.mp4",
+            "assets/reactions/draco_victory.mp4",
             filename="draco_victory.mp4"
-        )
+)
 
         await channel.send(file=file)
 
