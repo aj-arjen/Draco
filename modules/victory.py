@@ -24,12 +24,13 @@ class Victory(commands.Cog):
                 ephemeral=True
             )
             return
-          await interaction.response.defer(ephemeral=True)
+
+        await interaction.response.defer(ephemeral=True)
 
         channel = self.bot.get_channel(GENERAL_CHANNEL_ID)
 
         if channel is None:
-            await interaction.response.send_message(
+            await interaction.followup.send(
                 "❌ General channel not found.",
                 ephemeral=True
             )
@@ -51,20 +52,29 @@ class Victory(commands.Cog):
             text="— Draco 🐉"
         )
 
-        file = discord.File(
-            "assets/reactions/draco_victory.mp4",
-            filename="draco_victory.mp4"
-)
+        try:
+            file = discord.File(
+                "assets/reactions/draco_victory.mp4",
+                filename="draco_victory.mp4"
+            )
 
-        await channel.send(
-            embed=embed,
-            file=file
-)
+            await channel.send(
+                embed=embed,
+                file=file
+            )
 
-        await interaction.followup.send(
-    "🏆 Victory announcement posted successfully!",
-            ephemeral=True
-)
+            await interaction.followup.send(
+                "🏆 Victory announcement posted successfully!",
+                ephemeral=True
+            )
+
+        except Exception as e:
+            print(f"[Victory Error] {e}")
+
+            await interaction.followup.send(
+                f"❌ Error: {e}",
+                ephemeral=True
+            )
 
 
 async def setup(bot):
