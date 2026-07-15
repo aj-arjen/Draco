@@ -18,6 +18,9 @@ bot = Draco()
 
 giftcode_watcher = GiftCodeWatcher(bot)
 
+GIFTCODE_CHANNEL_ID = 1526281607411925173
+VERIFIED_ROLE_ID = 1525534814722064545
+
 
 @bot.event
 async def on_ready():
@@ -53,23 +56,48 @@ async def ping(interaction: discord.Interaction):
     )
 
 
+from discord import app_commands
+
+
 @bot.tree.command(
-    name="gifttest",
-    description="Post a test gift code."
+    name="giftcode",
+    description="Post a new Top Heroes gift code."
 )
-async def gifttest(interaction: discord.Interaction):
+@app_commands.describe(
+    code="Enter the gift code"
+)
+async def giftcode(
+    interaction: discord.Interaction,
+    code: str
+):
 
-    print("GIFTTEST COMMAND CALLED")
+    print("GIFTCODE COMMAND CALLED")
+    
+    verified_role = interaction.guild.get_role(VERIFIED_ROLE_ID)
 
-    code = "DRACO2026"
-
-    await post_giftcode(
-        interaction.channel,
-        code
+    if verified_role not in interaction.user.roles:
+    await interaction.response.send_message(
+        "❌ You don't have permission to use this command.",
+        ephemeral=True
     )
+    return
+
+    channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
+
+    if channel is None:
+        await interaction.response.send_message(
+        "❌ Gift code channel not found.",
+        ephemeral=True
+    )
+        return
+
+await post_giftcode(
+    channel,
+    code
+)
 
     await interaction.response.send_message(
-        "✅ Gift code posted.",
+        "✅ Gift code posted successfully!",
         ephemeral=True
     )
 
