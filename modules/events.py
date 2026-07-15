@@ -43,8 +43,13 @@ class Events(commands.Cog):
         channel_id = EVENT_REMINDER_CHANNELS[guild_name]
         channel = self.bot.get_channel(channel_id)
 
+        await channel.send(
+            f"📅 **{guild_name} Event**\n\n"
+            f"⚔️ **{event}**"
+        )
+
         await interaction.response.send_message(
-            f"✅ Event **{event}** will be posted in {channel.mention}.",
+            f"✅ Event posted in {channel.mention}.",
             ephemeral=True
         )
 
