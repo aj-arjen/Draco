@@ -68,9 +68,8 @@ class CommandCenterSelect(discord.ui.Select):
 
             embed.description = (
                 "Available commands:\n\n"
-                "`/gifttest`\n"
-                "Posts a test gift code."
-            )
+                "`/giftcode CODE`\n"
+                "Example: `/giftcode DRAGON2026`"
 
             file = discord.File(
                 "assets/reactions/draco_gift.png",
