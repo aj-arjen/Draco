@@ -27,18 +27,7 @@ TIMEZONES = [
 ]
 
 
-
 def load_timezones():
-  
-
-data = load_timezones()
-print("BEFORE:", data)
-
-data[str(interaction.user.id)] = timezone
-print("AFTER:", data)
-
-save_timezones(data)
-print("TIMEZONE SAVED")
 
     if not os.path.exists(TIMEZONE_FILE):
         return {}
