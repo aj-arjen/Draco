@@ -75,7 +75,7 @@ async def giftcode(
     
     verified_role = interaction.guild.get_role(VERIFIED_ROLE_ID)
 
-    if verified_role not in interaction.user.roles:
+        if verified_role not in interaction.user.roles:
     await interaction.response.send_message(
         "❌ You don't have permission to use this command.",
         ephemeral=True
@@ -84,12 +84,12 @@ async def giftcode(
 
     channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
 
-    if channel is None:
-        await interaction.response.send_message(
+        if channel is None:
+            await interaction.response.send_message(
         "❌ Gift code channel not found.",
         ephemeral=True
     )
-        return
+            return
 
 await post_giftcode(
     channel,
