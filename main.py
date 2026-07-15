@@ -82,7 +82,7 @@ if verified_role not in interaction.user.roles:
     )
     return
 
-channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
+    channel = bot.get_channel(GIFTCODE_CHANNEL_ID)
 
 if channel is None:
     await interaction.response.send_message(
