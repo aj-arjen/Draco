@@ -91,14 +91,14 @@ if channel is None:
     )
     return
 
-await post_giftcode(
-    channel,
-    code
+    await post_giftcode(
+        channel,
+        code
 )
 
-await interaction.response.send_message(
-    "✅ Gift code posted successfully!",
-    ephemeral=True
+    await interaction.response.send_message(
+        "✅ Gift code posted successfully!",
+        ephemeral=True
 )
 
 
