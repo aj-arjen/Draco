@@ -120,6 +120,8 @@ class Events(commands.Cog):
         date: str,
         time: str,
     ):
+      
+        print("EVENTADD STARTED")
 
         guild_name = get_user_guild(interaction.user)
 
@@ -148,6 +150,7 @@ class Events(commands.Cog):
                 time,
                 timezone_name,
             )
+            print("1 - timestamp ok")
 
         except Exception:
 
@@ -164,6 +167,7 @@ class Events(commands.Cog):
             self.bot,
             guild_name,
         )
+        print("2 - channel ok")
 
         if channel is None:
 
@@ -172,57 +176,61 @@ class Events(commands.Cog):
                 ephemeral=True
             )
             return
+        events = load_events()
 
-            events = load_events()
+        event_id = len(events) + 1
 
-            event_id = len(events) + 1
+        events.append(
+            {
+                "id": event_id,
+                "guild": guild_name,
+                "event": event,
+                "timestamp": timestamp,
+                "channel_id": channel.id,
+                "today_sent": False,
+                "hour_sent": False,
+                "final_sent": False,
+                "created_by": interaction.user.id,
+            }
+        )
 
-            events.append(
-                {
-                    "id": event_id,
-                    "guild": guild_name,
-                    "event": event,
-                    "timestamp": timestamp,
-                    "channel_id": channel.id,
-                    "today_sent": False,
-                    "hour_sent": False,
-                    "final_sent": False,
-                    "created_by": interaction.user.id,
-                }
-            )
+        save_events(events)
+        print("3 - event saved")
 
-            save_events(events)
+        embed = discord.Embed(
+            title="✅ Event Scheduled",
+            color=discord.Color.green(),
+        )
 
-            embed = discord.Embed(
-                title="✅ Event Scheduled",
-                color=discord.Color.green(),
-            )
+        embed.add_field(
+            name="⚔️ Event",
+            value=event,
+            inline=False,
+        )
 
-            embed.add_field(
-                name="⚔️ Event",
-                value=event,
-                inline=False,
-            )
+        embed.add_field(
+            name="🏰 Guild",
+            value=guild_name,
+            inline=True,
+        )
 
-            embed.add_field(
-                name="🏰 Guild",
-                value=guild_name,
-                inline=True,
-            )
+        embed.add_field(
+            name="🕒 Starts",
+            value=f"<t:{timestamp}:F>",
+            inline=True,
+        )
 
-            embed.add_field(
-                name="🕒 Starts",
-                value=f"<t:{timestamp}:F>",
-                inline=True,
-            )
+        embed.set_footer(
+            text="Draco will automatically send the Today, 1 Hour and 10 Minutes reminders."
+        )
 
-            embed.set_footer(
-                text="Draco will automatically send the Today, 1 Hour and 10 Minutes reminders."
-            )
+        print("4 - sending embed")
 
-            await interaction.response.send_message(
-                embed=embed,
-                ephemeral=True,
-            )
+        await interaction.response.send_message(
+            embed=embed,
+            ephemeral=True,
+        )
+
+
 async def setup(bot):
     await bot.add_cog(Events(bot))
