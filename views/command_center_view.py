@@ -70,6 +70,7 @@ class CommandCenterSelect(discord.ui.Select):
                 "Available commands:\n\n"
                 "`/giftcode CODE`\n"
                 "Example: `/giftcode DRAGON2026`"
+            )
 
             file = discord.File(
                 "assets/reactions/draco_gift.png",
