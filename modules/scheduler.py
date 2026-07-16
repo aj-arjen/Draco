@@ -6,8 +6,6 @@ from datetime import datetime, timezone
 import discord
 from discord.ext import commands
 
-print(">>> scheduler.py imported <<<")
-
 EVENTS_FILE = "data/events/events.json"
 
 
@@ -28,23 +26,19 @@ def save_events(events):
 
 
 class Scheduler(commands.Cog):
-
     def __init__(self, bot):
-        print(">>> Scheduler __init__ <<<")
         self.bot = bot
-        task = self.bot.loop.create_task(self.scheduler_loop())
-        print(">>> Scheduler task created <<<", task)
+        self.task = asyncio.create_task(self.scheduler_loop())
 
     async def send_reminder(self, event, reminder_type):
         channel = self.bot.get_channel(event["channel_id"])
         if channel is None:
-            print(f"Channel {event['channel_id']} not found")
             return
 
         titles = {
             "today": "🌅 Today's Battle Awaits!",
             "hour": "⏰ Battle Begins in 1 Hour!",
-            "final": "🔥 Battle Begins in 10 Minutes!",
+            "final": "🔥 Battle Begins in 10 Minutes!"
         }
 
         embed = discord.Embed(
@@ -55,33 +49,27 @@ class Scheduler(commands.Cog):
         embed.add_field(name="🕒 Starts", value=f"<t:{event['timestamp']}:F>", inline=False)
 
         await channel.send(embed=embed)
-        print(f"Sent {reminder_type} reminder for {event['event']}")
 
     async def scheduler_loop(self):
-        print(">>> scheduler_loop entered <<<")
         await self.bot.wait_until_ready()
         print("Scheduler started")
 
-        while not self.bot.is_closed():
+        while True:
             events = load_events()
             now = int(datetime.now(timezone.utc).timestamp())
-
             changed = False
 
             for event in events:
                 remaining = event["timestamp"] - now
-                print(f"{event['event']} remaining={remaining}")
 
                 if remaining <= 600 and not event.get("final_sent", False):
                     await self.send_reminder(event, "final")
                     event["final_sent"] = True
                     changed = True
-
                 elif remaining <= 3600 and not event.get("hour_sent", False):
                     await self.send_reminder(event, "hour")
                     event["hour_sent"] = True
                     changed = True
-
                 elif remaining <= 86400 and not event.get("today_sent", False):
                     await self.send_reminder(event, "today")
                     event["today_sent"] = True
