@@ -140,7 +140,7 @@ class CommandCenterSelect(discord.ui.Select):
             embed.set_image(
             url="attachment://draco_underconstruction.png"
             )
-       elif choice == "Suggestions":
+        elif choice == "Suggestions":
 
             embed.title = "💡 Suggestions"
 
@@ -203,7 +203,7 @@ class CommandCenterSelect(discord.ui.Select):
 
         class CommandCenterView(discord.ui.View):
 
-        def __init__(self):
+            def __init__(self):
 
         super().__init__(timeout=None)
 
