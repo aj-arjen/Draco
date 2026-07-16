@@ -23,12 +23,12 @@ class Draco(commands.Bot):
         await self.load_extension("modules.draco")
         await self.load_extension("modules.command_center")
         await self.load_extension("modules.timezone")
-    try:
-        await self.load_extension("modules.scheduler")
-        print("Scheduler extension loaded")
-    except Exception as e:
-        print("SCHEDULER LOAD ERROR:", repr(e))
-        raise
+        try:
+            await self.load_extension("modules.scheduler")
+            print("Scheduler extension loaded")
+        except Exception as e:
+            print("SCHEDULER LOAD ERROR:", repr(e))
+            raise
         await self.load_extension("modules.victory")
         await self.load_extension("modules.events")
         await self.tree.sync()
