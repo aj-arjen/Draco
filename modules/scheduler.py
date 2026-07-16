@@ -32,7 +32,8 @@ class Scheduler(commands.Cog):
     def __init__(self, bot):
         print(">>> Scheduler __init__ <<<")
         self.bot = bot
-        self.bot.loop.create_task(self.scheduler_loop())
+        task = self.bot.loop.create_task(self.scheduler_loop())
+        print(">>> Scheduler task created <<<", task)
 
     async def send_reminder(self, event, reminder_type):
         channel = self.bot.get_channel(event["channel_id"])
