@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 import discord
 from discord.ext import commands
 
+print(">>> scheduler.py imported <<<")
+
 EVENTS_FILE = "data/events/events.json"
 
 
@@ -28,6 +30,7 @@ def save_events(events):
 class Scheduler(commands.Cog):
 
     def __init__(self, bot):
+        print(">>> Scheduler __init__ <<<")
         self.bot = bot
         self.bot.loop.create_task(self.scheduler_loop())
 
@@ -54,6 +57,7 @@ class Scheduler(commands.Cog):
         print(f"Sent {reminder_type} reminder for {event['event']}")
 
     async def scheduler_loop(self):
+        print(">>> scheduler_loop entered <<<")
         await self.bot.wait_until_ready()
         print("Scheduler started")
 
