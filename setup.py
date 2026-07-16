@@ -1,10 +1,10 @@
 import discord
 from discord.ext import commands
+
 from views.views import ApplyView
 
 
 class Setup(commands.Cog):
-
     def __init__(self, bot):
         self.bot = bot
 
@@ -36,21 +36,6 @@ class Setup(commands.Cog):
             inline=False
         )
 
-        embed.add_field(
-            name="🔒 Review Process",
-            value=(
-                "Once your application has been submitted, a Guild Leader will review it.\n\n"
-                "After approval, you'll automatically receive access to the appropriate channels."
-            ),
-            inline=False
-        )
-
-        embed.add_field(
-            name="⚠️ Important",
-            value="Providing incorrect information may result in your application being declined.",
-            inline=False
-        )
-
         embed.set_footer(
             text="⚔️ Good luck, Warrior! — Draco 🐉"
         )
@@ -58,32 +43,10 @@ class Setup(commands.Cog):
         await interaction.channel.send(
             embed=embed,
             view=ApplyView()
-)
+        )
 
         await interaction.response.send_message(
             "✅ Application panel created.",
-            ephemeral=True
-        )
-        
-    @discord.app_commands.command(
-        name="roles",
-        description="Show all role IDs"
-    )
-    @discord.app_commands.default_permissions(administrator=True)
-    async def roles(self, interaction: discord.Interaction):
-
-        lines = []
-
-        for role in reversed(interaction.guild.roles):
-            lines.append(f"{role.name}: {role.id}")
-
-        text = "\n".join(lines)
-
-        if len(text) > 1900:
-            text = text[:1900]
-
-        await interaction.response.send_message(
-            f"```{text}```",
             ephemeral=True
         )
 
