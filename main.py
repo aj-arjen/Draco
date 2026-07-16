@@ -35,6 +35,7 @@ async def on_ready():
         "modules.command_center",
         "modules.timezone",
         "modules.victory",
+        "modules.suggestions",
     ]
 
     for module in modules:
