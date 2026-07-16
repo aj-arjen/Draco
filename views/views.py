@@ -256,7 +256,7 @@ class ReviewView(discord.ui.View):
             roles_to_add.append(language)
 
         guild = interaction.guild.get_role(
-            GUILD_ROLES[self.guild]
+            GUILD_MEMBER_ROLES[self.guild]
         )
 
         if guild:
