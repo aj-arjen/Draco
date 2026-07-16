@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+print("BOT.PY LOADED")
 
 
 class Draco(commands.Bot):
@@ -19,19 +20,31 @@ class Draco(commands.Bot):
         )
 
     async def setup_hook(self):
+        print("Loading setup")
         await self.load_extension("setup")
+
+        print("Loading draco")
         await self.load_extension("modules.draco")
+
+        print("Loading command_center")
         await self.load_extension("modules.command_center")
+
+        print("Loading timezone")
         await self.load_extension("modules.timezone")
-        try:
-            await self.load_extension("modules.scheduler")
-            print("Scheduler extension loaded")
-        except Exception as e:
-            print("SCHEDULER LOAD ERROR:", repr(e))
-            raise
+
+        print("Loading scheduler")
+        await self.load_extension("modules.scheduler")
+
+        print("Loading victory")
         await self.load_extension("modules.victory")
+
+        print("Loading events")
         await self.load_extension("modules.events")
+
+        print("Syncing tree")
         await self.tree.sync()
+
+        print("setup_hook finished")
     async def on_ready(self):
 
         print("-" * 50)
