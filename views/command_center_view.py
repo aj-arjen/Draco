@@ -20,28 +20,27 @@ class CommandCenterSelect(discord.ui.Select):
             ),
 
             discord.SelectOption(
-                label="Applications",
-                emoji="📝",
-                description="Application system"
-            ),
-
-            discord.SelectOption(
                 label="Red Alerts",
                 emoji="🚨",
                 description="Red Alert commands"
+            ),
+            discord.SelectOption(
+                label="Hero Database",
+                emoji="📚",
+                description="Browse heroes, gear, etc.."
             ),
 
             discord.SelectOption(
                 label="Suggestions",
                 emoji="💡",
-                description="Coming soon"
+                description="Share your ideas for Draco or this server"
             ),
-
+            
             discord.SelectOption(
-                label="Hero Database",
-                emoji="📚",
-                description="Coming soon"
-            )
+                label="Appreciation",
+                emoji="❤️",
+                description="Show your appreciation if you like all the work I've put into this"
+            ),
 
         ]
 
@@ -103,25 +102,6 @@ class CommandCenterSelect(discord.ui.Select):
         url="attachment://draco_help.png"
     )
 
-        elif choice == "Applications":
-
-            embed.title = "📝 Applications"
-
-            embed.description = (
-                "Available commands:\n\n"
-                "`/setup`\n"
-                "Creates the application panel."
-            )
-
-            file = discord.File(
-                "assets/reactions/draco_welcome.png",
-                filename="draco_welcome.png"
-            )
-
-            embed.set_image(
-                url="attachment://draco_welcome.png"
-            )
-
         elif choice == "Red Alerts":
 
             embed.title = "🚨 Red Alerts"
@@ -141,6 +121,26 @@ class CommandCenterSelect(discord.ui.Select):
                 url="attachment://draco_angry.png"
             )
 
+        elif choice == "Hero Database":
+
+            embed.title = "📚 Hero Database"
+
+            embed.description = (
+        "The Hero Database is currently under construction.\n\n"
+        "In the future, this will be the place where you'll find "
+        "everything you need to know about Heroes, Factions, Gear, "
+        "Best Lineups and much more... 🐉"
+            )
+
+            file = discord.File(
+        "assets/reactions/draco_underconstruction.png",
+            filename="draco_underconstruction.png"
+            )
+
+            embed.set_image(
+            url="attachment://draco_underconstruction.png"
+            )
+        
         else:
 
             embed.title = "🚧 Under Construction"
