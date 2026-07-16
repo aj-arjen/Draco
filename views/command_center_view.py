@@ -140,7 +140,42 @@ class CommandCenterSelect(discord.ui.Select):
             embed.set_image(
             url="attachment://draco_underconstruction.png"
             )
-        
+       elif choice == "Suggestions":
+
+            embed.title = "💡 Suggestions"
+
+            embed.description = (
+        "Share your ideas to help improve Draco and the Dragons Den community.\n\n"
+        "**Command:** `/suggestion`"
+            )
+
+            file = discord.File(
+        "assets/reactions/draco_idea.png",
+            filename="draco_idea.png"
+            )
+
+            embed.set_image(
+                url="attachment://draco_idea.png"
+            )
+
+
+        elif choice == "Appreciation":
+
+            embed.title = "❤️ Appreciation"
+
+            embed.description = (
+        "Show your appreciation if you like all the work I've put into this server.\n\n"
+        "**Command:** `/appreciation`"
+            )
+
+            file = discord.File(
+        "assets/reactions/draco_love.png",
+            filename="draco_love.png"
+            )
+
+            embed.set_image(
+                url="attachment://draco_love.png"
+            )
         else:
 
             embed.title = "🚧 Under Construction"
@@ -166,9 +201,9 @@ class CommandCenterSelect(discord.ui.Select):
         )
 
 
-class CommandCenterView(discord.ui.View):
+        class CommandCenterView(discord.ui.View):
 
-    def __init__(self):
+        def __init__(self):
 
         super().__init__(timeout=None)
 
