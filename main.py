@@ -34,9 +34,7 @@ async def on_ready():
         "modules.draco",
         "modules.command_center",
         "modules.timezone",
-        "modules.scheduler",
         "modules.victory",
-        "modules.events",
     ]
 
     for module in modules:
