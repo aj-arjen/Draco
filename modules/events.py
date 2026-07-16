@@ -32,6 +32,8 @@ def load_events():
 
 def save_events(events):
 
+    os.makedirs(os.path.dirname(EVENTS_FILE), exist_ok=True)
+
     with open(EVENTS_FILE, "w", encoding="utf-8") as f:
         json.dump(events, f, indent=4)
 
@@ -81,7 +83,6 @@ def get_user_timezone(user_id):
     data = load_timezones()
 
     return data.get(str(user_id))
-
 # ==========================================================
 # TIME HELPERS
 # ==========================================================
@@ -168,7 +169,7 @@ class Events(commands.Cog):
             events = load_events()
 
             event_id = len(events) + 1
-
+           
             events.append(
                 {
                     "id": event_id,
