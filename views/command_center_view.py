@@ -11,7 +11,7 @@ class CommandCenterSelect(discord.ui.Select):
                 label="Translation",
                 emoji="💬",
                 description="Translate messages"
-),
+            ),
 
             discord.SelectOption(
                 label="Gift Codes",
@@ -141,7 +141,7 @@ class CommandCenterSelect(discord.ui.Select):
             embed.set_image(
             url="attachment://draco_underconstruction.png"
             )
-            elif choice == "Suggestions":
+        elif choice == "Suggestions":
 
             embed.title = "💡 Suggestions"
 
@@ -160,7 +160,7 @@ class CommandCenterSelect(discord.ui.Select):
             )
 
 
-            elif choice == "Appreciation":
+        elif choice == "Appreciation":
 
             embed.title = "❤️ Appreciation"
 
@@ -198,11 +198,9 @@ class CommandCenterSelect(discord.ui.Select):
         await interaction.response.edit_message(embed=embed, attachments=[file], view=self.view
         )
             
+class CommandCenterView(discord.ui.View):
 
-
-        class CommandCenterView(discord.ui.View):
-
-            def __init__(self):
+    def __init__(self):
 
         super().__init__(timeout=None)
 
