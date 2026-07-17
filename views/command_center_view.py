@@ -58,7 +58,8 @@ class CommandCenterSelect(discord.ui.Select):
         embed = discord.Embed(
             color=0xC49A3A
         )
-
+        embed.title = "Test"
+        embed.description = "Dropdown werkt."
         file = None
 
         if choice == "Gift Codes":
@@ -194,11 +195,9 @@ class CommandCenterSelect(discord.ui.Select):
                 url="attachment://draco_underconstruction.png"
             )
 
-        await interaction.response.defer(ephemeral=True)
-            embed=embed,
-            attachments=[file],
-            view=self.view
+        await interaction.response.edit_message(embed=embed, attachments=[file], view=self.view
         )
+            
 
 
         class CommandCenterView(discord.ui.View):
