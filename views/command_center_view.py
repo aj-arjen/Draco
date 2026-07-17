@@ -27,7 +27,7 @@ class CommandCenterSelect(discord.ui.Select):
                 embed.title = "🎁 Gift Codes"
                 embed.description = (
                     "Help this community by adding the latest giftcodes.\n\n"
-                    "Command:\n"
+                    "**Command:** \n"
                     '/giftcode "add giftcode here"'
                 )
                 image = "draco_gift.png"
@@ -45,7 +45,7 @@ class CommandCenterSelect(discord.ui.Select):
             elif choice == "Red Alerts":
                 embed.title = "🚨 Red Alerts"
                 embed.description = (
-                    "Available commands:\n\n"
+                    "**Command:** \n\n"
                     "`/alert`\n"
                     "Send a Red Alert."
                 )
@@ -64,7 +64,7 @@ class CommandCenterSelect(discord.ui.Select):
                 embed.title = "💡 Suggestions"
                 embed.description = (
                     "Share your ideas to help improve Draco and the Dragons Den community.\n\n"
-                    "**Command:** `/suggestion`"
+                    "**Command:** `/suggestion 'type suggestion here'`"
                 )
                 image = "draco_idea.png"
 
