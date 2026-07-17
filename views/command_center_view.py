@@ -40,7 +40,7 @@ class CommandCenterSelect(discord.ui.Select):
                     "🌎 Connect with players from all over the world.\n\n"
                     "💡 More translation features are hopefully coming in the future."
                 )
-                image = "draco_help.png"
+                image = "draco_language.png"
 
             elif choice == "Red Alerts":
                 embed.title = "🚨 Red Alerts"
