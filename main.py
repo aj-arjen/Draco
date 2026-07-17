@@ -38,6 +38,7 @@ async def on_ready():
         "modules.draco",
         "modules.command_center",
         "modules.victory",
+        "modules.redalert",
         "modules.suggestions",
         "modules.appreciation",
     ]
