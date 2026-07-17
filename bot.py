@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from views.command_center_view import CommandCenterView
 
 print("BOT.PY LOADED")
 
@@ -22,6 +23,8 @@ class Draco(commands.Bot):
         print(f"🐉 Logged in as {self.user}")
         print(f"Guilds: {len(self.guilds)}")
         print("-" * 40)
+        
+        self.add_view(CommandCenterView())
 
         await self.change_presence(
             activity=discord.Activity(
