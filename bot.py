@@ -20,6 +20,7 @@ class Draco(commands.Bot):
     async def on_ready(self):
         print("-" * 40)
         print(f"🐉 Logged in as {self.user}")
+        print(f"Guilds: {len(self.guilds)}")
         print("-" * 40)
 
         await self.change_presence(
