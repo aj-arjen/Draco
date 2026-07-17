@@ -78,7 +78,7 @@ class CommandCenterSelect(discord.ui.Select):
                 embed.title = "❤️ Appreciation"
                 embed.description = (
                     "Show your appreciation if you like all the work I've put into this server.\n\n"
-                    "**Command:** `/appreciation 'type message' here`"
+                    "**Command:** `/appreciation 'type message here'`"
                 )
                 image = "draco_love.png"
 
