@@ -12,6 +12,7 @@ class CommandCenterSelect(discord.ui.Select):
             discord.SelectOption(label="Appreciation", emoji="❤️", description="Show your appreciation"),
         ]
         super().__init__(
+            custom_id="command_center_select",
             placeholder="Choose a category...",
             min_values=1,
             max_values=1,
