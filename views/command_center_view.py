@@ -1,10 +1,11 @@
 import discord
+import traceback
 
 class CommandCenterSelect(discord.ui.Select):
     def __init__(self):
         options=[
             discord.SelectOption(label="Translation",emoji="💬",description="Translate messages"),
-            discord.SelectOption(label="Gift Codes",emoji="🎁",description="View all gift code commands"),
+            discord.SelectOption(label="Gift Codes",emoji="🎁",description="View all Gift Codes commands"),
             discord.SelectOption(label="Red Alerts",emoji="🚨",description="Red Alert commands"),
             discord.SelectOption(label="Hero Database",emoji="📚",description="Browse heroes, gear, etc."),
             discord.SelectOption(label="Suggestions",emoji="💡",description="Share your ideas"),
@@ -13,13 +14,18 @@ class CommandCenterSelect(discord.ui.Select):
         super().__init__(placeholder="Choose a category...",min_values=1,max_values=1,options=options)
 
     async def callback(self, interaction: discord.Interaction):
+    try:
+        # async def callback(self, interaction: discord.Interaction):
         choice=self.values[0]
         embed=discord.Embed(color=0xC49A3A)
 
         if choice=="Gift Codes":
             embed.title="🎁 Gift Codes"
-            embed.description="Available commands:\n\n`/giftcode CODE`\nExample: `/giftcode DRAGON2026`"
-            image="draco_gift.png"
+            embed.description = (
+    "Help this community by adding the latest giftcodes.\n\n"
+    "Command:\n"
+    '/giftcode "add giftcode here"'
+)
         elif choice=="Translation":
             embed.title="💬 Translation"
             embed.description="💬 **Translate Messages**\nUse `/translate` on any message to instantly read it in your own language.\n\n🌎 Connect with players from all over the world.\n\n💡 More translation features are hopefully coming in the future."
