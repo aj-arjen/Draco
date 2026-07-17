@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 
 RED_ALERT_CHANNEL_ID = 1526579916408225802
 
@@ -22,44 +23,19 @@ EMBED_COLORS = {
 
 
 class RedAlertSelect(discord.ui.Select):
-
     def __init__(self):
 
         options = [
-            discord.SelectOption(
-                label="DEN Hive",
-                emoji="🟡",
-                value="DEN"
-            ),
-            discord.SelectOption(
-                label="ACE Hive",
-                emoji="🔵",
-                value="ACE"
-            ),
-            discord.SelectOption(
-                label="NVN Hive",
-                emoji="🟢",
-                value="NVN"
-            ),
-            discord.SelectOption(
-                label="OFA Hive",
-                emoji="🟣",
-                value="OFA"
-            ),
-            discord.SelectOption(
-                label="OBS Hive",
-                emoji="🔴",
-                value="OBS"
-            ),
-            discord.SelectOption(
-                label="Citadel",
-                emoji="🏰",
-                value="CITADEL"
-            ),
+            discord.SelectOption(label="ACE", emoji="🔵", value="ACE"),
+            discord.SelectOption(label="DEN", emoji="🟡", value="DEN"),
+            discord.SelectOption(label="OFA", emoji="🟣", value="OFA"),
+            discord.SelectOption(label="NVN", emoji="🟢", value="NVN"),
+            discord.SelectOption(label="OBS", emoji="🔴", value="OBS"),
+            discord.SelectOption(label="Citadel", emoji="🏛️", value="CITADEL"),
         ]
 
         super().__init__(
-            placeholder="Select a Red Alert...",
+            placeholder="Select the guild under attack...",
             min_values=1,
             max_values=1,
             options=options
@@ -76,26 +52,31 @@ class RedAlertSelect(discord.ui.Select):
             )
             return
 
-        image_path = ALERT_IMAGES[self.values[0]]
+        guild = self.values[0]
+
+        image_path = ALERT_IMAGES[guild]
         filename = image_path.split("/")[-1]
 
-        file = discord.File(
-            image_path,
-            filename=filename
-        )
+        file = discord.File(image_path, filename=filename)
+
+        if guild == "CITADEL":
+            description = (
+                "🏛THE CITADEL IS UNDER ATTACK!**\n\n"
+                f"Reported by {interaction.user.mention}"
+            )
+        else:
+            description = (
+                f"⚔️ **{guild} IS UNDER ATTACK!**\n\n"
+                f"Reported by {interaction.user.mention}"
+            )
 
         embed = discord.Embed(
             title="🚨 DRACO RED ALERT 🚨",
-            description=(
-                "⚔️ **PREPARE TO DEFEND!**\n\n"
-                f"👤 Reported by {interaction.user.mention}"
-            ),
-            color=EMBED_COLORS[self.values[0]]
+            description=description,
+            color=EMBED_COLORS[guild]
         )
 
-        embed.set_image(
-            url=f"attachment://{filename}"
-        )
+        embed.set_image(url=f"attachment://{filename}")
 
         await channel.send(
             content="@everyone",
@@ -110,11 +91,27 @@ class RedAlertSelect(discord.ui.Select):
 
 
 class RedAlertView(discord.ui.View):
-
     def __init__(self):
-
         super().__init__(timeout=60)
+        self.add_item(RedAlertSelect())
 
-        self.add_item(
-            RedAlertSelect()
+
+class RedAlert(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+    @discord.app_commands.command(
+        name="alert",
+        description="Send a Red Alert."
+    )
+    async def alert(self, interaction: discord.Interaction):
+
+        await interaction.response.send_message(
+            "🚨 Select the guild under attack:",
+            view=RedAlertView(),
+            ephemeral=True
         )
+
+
+async def setup(bot):
+    await bot.add_cog(RedAlert(bot))
