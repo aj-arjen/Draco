@@ -45,9 +45,15 @@ class CommandCenterSelect(discord.ui.Select):
             elif choice == "Red Alerts":
                 embed.title = "🚨 Red Alerts"
                 embed.description = (
-                    "**Command:** \n\n"
-                    "`/alert`\n"
-                    "Send a Red Alert."
+                    "Is one of the Top 5 Guilds under attack? Or maybe the Capitol?\n\n"
+                    "Warn everyone by sending an alert.\n\n"
+                    "**Commands:**\n"
+                    "`/alert ACE`\n"
+                    "`/alert DEN`\n"
+                    "`/alert OFA`\n"
+                    "`/alert NVN`\n"
+                    "`/alert OBS`\n"
+                    "`/alert Capitol`"
                 )
                 image = "draco_surprised.png"
 
