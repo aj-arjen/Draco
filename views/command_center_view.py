@@ -49,7 +49,7 @@ class CommandCenterSelect(discord.ui.Select):
                     "`/alert`\n"
                     "Send a Red Alert."
                 )
-                image = "draco_angry.png"
+                image = "draco_surprised.png"
 
             elif choice == "Hero Database":
                 embed.title = "📚 Hero Database"
