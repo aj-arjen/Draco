@@ -67,13 +67,49 @@ class GuildView(discord.ui.View):
         interaction: discord.Interaction,
         select: discord.ui.Select
     ):
+
+        guild = select.values[0]
+
+        if guild == "Other":
+            await interaction.response.send_modal(
+                OtherGuildModal(self.language)
+                )
+            return
+
         await interaction.response.edit_message(
             content="⭐ Select your rank:",
             view=RankView(
                 self.language,
-                select.values[0]
+                guild
             )
         )
+class OtherGuildModal(discord.ui.Modal, title="Guild Tag"):
+
+    guild_tag = discord.ui.TextInput(
+        label="🏰 Guild Tag",
+        placeholder="ABC",
+        required=True,
+        min_length=3,
+        max_length=3
+    )
+
+    def __init__(self, language):
+        super().__init__()
+        self.language = language
+
+    async def on_submit(
+        self,
+        interaction: discord.Interaction
+    ):
+
+        await interaction.response.edit_message(
+            content="⭐ Select your rank:",
+            view=RankView(
+                self.language,
+                self.guild_tag.value
+            )
+        )       
+        
 class RankView(discord.ui.View):
     def __init__(self, language, guild):
         super().__init__(timeout=300)
@@ -255,8 +291,10 @@ class ReviewView(discord.ui.View):
         if language:
             roles_to_add.append(language)
 
+        guild_key = self.guild if self.guild in GUILD_MEMBER_ROLES else "Other"
+
         guild = interaction.guild.get_role(
-            GUILD_MEMBER_ROLES[self.guild]
+            GUILD_MEMBER_ROLES[guild_key]
         )
 
         if guild:
@@ -264,8 +302,10 @@ class ReviewView(discord.ui.View):
 
         if self.rank == "leader":
 
+            leader_key = self.guild if self.guild in LEADER_ROLES else "Other"
+
             leader = interaction.guild.get_role(
-                LEADER_ROLES[self.guild]
+                LEADER_ROLES[leader_key]
             )
 
             if leader:
