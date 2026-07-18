@@ -2,6 +2,8 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
+from config.config import DRACO_OWNER
+
 
 
 class Say(commands.Cog):
