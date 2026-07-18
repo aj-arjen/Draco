@@ -41,6 +41,7 @@ async def on_ready():
         "modules.redalert",
         "modules.suggestions",
         "modules.appreciation",
+        "modules.say",
     ]
 
     for module in modules:
