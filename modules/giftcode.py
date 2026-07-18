@@ -38,15 +38,15 @@ class GiftCode(commands.Cog):
 
         if channel is None:
             await interaction.followup.send(
-            "❌ Giftcode channel not found.",
-            ephemeral=True
-        )
-        return
+                "❌ Giftcode channel not found.",
+                ephemeral=True
+            )
+            return
 
-    await post_giftcode(
-        channel,
-        code
-    )
+        await post_giftcode(
+            channel,
+            code
+        )
 
 
 async def setup(bot):
