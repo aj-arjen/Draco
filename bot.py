@@ -17,6 +17,30 @@ class Draco(commands.Bot):
             intents=intents,
             help_command=None
         )
+    async def setup_hook(self):
+        modules = [
+            "setup",
+            "modules.draco",
+            "modules.command_center",
+            "modules.giftcode",
+            "modules.victory",
+            "modules.redalert",
+            "modules.suggestions",
+            "modules.appreciation",
+            "modules.say",
+        ]
+
+        for module in modules:
+            try:
+                print(f"Loading {module}...")
+                await self.load_extension(module)
+                print(f"Loaded {module}")
+            except Exception as e:
+                print(f"FAILED: {module}")
+                print(repr(e))
+
+        synced = await self.tree.sync()
+        print(f"Synced {len(synced)} slash commands.")
 
     async def on_ready(self):
         print("-" * 40)
