@@ -37,6 +37,7 @@ async def on_ready():
         "setup",
         "modules.draco",
         "modules.command_center",
+        "modules.giftcodes",
         "modules.victory",
         "modules.redalert",
         "modules.suggestions",
