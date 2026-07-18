@@ -56,8 +56,15 @@ class Say(commands.Cog):
             filename="draco.png"        
         )
 
+        embed = discord.Embed(
+            title="🐉 Draco",
+            description=message,
+            color=discord.Color.orange()
+        )
+        embed.set_thumbnail(url="attachment://draco.png")
+
         await interaction.channel.send(
-            message,
+            embed=embed,
             file=file
         )
 
