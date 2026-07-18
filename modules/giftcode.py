@@ -2,7 +2,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from config.config import DRACO_OWNER
+from config.config import DRACO_OWNER, GIFTCODE_CHANNEL
 from modules.giftcodes import post_giftcode
 
 
@@ -34,10 +34,19 @@ class GiftCode(commands.Cog):
             ephemeral=True
         )
 
-        await post_giftcode(
-            interaction.channel,
-            code
+        channel = self.bot.get_channel(GIFTCODE_CHANNEL)
+
+        if channel is None:
+            await interaction.followup.send(
+            "❌ Giftcode channel not found.",
+            ephemeral=True
         )
+        return
+
+    await post_giftcode(
+        channel,
+        code
+    )
 
 
 async def setup(bot):
