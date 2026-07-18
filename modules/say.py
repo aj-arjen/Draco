@@ -3,6 +3,7 @@ from discord import app_commands
 from discord.ext import commands
 
 from config.config import DRACO_OWNER
+from config.draco_assets import DRACO_IMAGES
 
 
 
@@ -14,13 +15,29 @@ class Say(commands.Cog):
         name="say",
         description="Make Draco speak."
     )
+    @app_commands.choices(
+    emotion=[
+        app_commands.Choice(name="Yes", value="yes"),
+        app_commands.Choice(name="No", value="no"),
+        app_commands.Choice(name="Shy", value="shy"),
+        app_commands.Choice(name="Celebrate", value="celebrate"),
+        app_commands.Choice(name="Thinks", value="thinks"),
+        app_commands.Choice(name="Serious", value="serious"),
+        app_commands.Choice(name="Confused", value="confused"),
+        app_commands.Choice(name="Heart", value="heart"),
+        app_commands.Choice(name="Cry", value="cry"),
+        app_commands.Choice(name="Hype", value="hype"),
+    ]
+)
     @app_commands.describe(
-        message="Message Draco should send."
+        message="Message Draco should send.",
+        emotion="Choose Draco's emotion."
     )
     async def say(
         self,
         interaction: discord.Interaction,
-        message: str
+        message: str,
+        emotion: str
     ):
 
         if interaction.user.id != DRACO_OWNER:
