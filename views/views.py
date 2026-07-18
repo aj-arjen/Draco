@@ -283,7 +283,7 @@ class ReviewView(discord.ui.View):
 
         try:
             await member.edit(
-                nick=self.ign
+                nick=f"[{self.guild}] {self.ign}"
             )
         except discord.Forbidden:
             pass
