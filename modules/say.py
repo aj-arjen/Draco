@@ -37,7 +37,7 @@ class Say(commands.Cog):
         self,
         interaction: discord.Interaction,
         message: str,
-        emotion: str
+        emotion: app_commands.Choice[str]
     ):
 
         if interaction.user.id != DRACO_OWNER:
@@ -51,8 +51,15 @@ class Say(commands.Cog):
             "✅ Message sent.",
             ephemeral=True
         )
+        file = discord.File(
+            DRACO_IMAGES[emotion.value],
+            filename="draco.png"        
+        )
 
-        await interaction.channel.send(message)
+        await interaction.channel.send(
+            message,
+            file=file
+        )
 
 
 async def setup(bot):
