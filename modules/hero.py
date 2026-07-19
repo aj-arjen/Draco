@@ -52,7 +52,7 @@ class Hero(commands.Cog):
         # Hero thumbnail
         # --------------------------------------------------
 
-        image_path = f"assets/heroes/{hero['id']}.png"
+        image_path = f"hero_database/factions/league/heroes/images/adjudicator.png/{hero['id']}.png"
 
         file = discord.File(
             image_path,
