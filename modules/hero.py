@@ -36,14 +36,27 @@ class Hero(commands.Cog):
         color = faction_colors.get(hero["faction"], 0xC49A3A)
 
         # --------------------------------------------------
+        # Position formatting
+        # --------------------------------------------------
+
+        position = hero["position"]
+
+        if position.lower() == "front":
+            position = "Frontline"
+        elif position.lower() == "middle":
+            position = "Midline"
+        elif position.lower() == "back":
+            position = "Backline"
+
+        # --------------------------------------------------
         # Hero thumbnail
         # --------------------------------------------------
 
-        image_path = f'hero_database/factions/league/heroes/images/{hero["id"]}.png'
+        image_path = f"assets/heroes/{hero['id']}.png"
 
         file = discord.File(
             image_path,
-            filename=f'{hero["id"]}.png'
+            filename=f"{hero['id']}.png"
         )
 
         # --------------------------------------------------
@@ -53,26 +66,23 @@ class Hero(commands.Cog):
         embed = discord.Embed(
             title=hero["name"],
             description=(
-                f'**{hero["faction"]} • '
-                f'{hero["rarity"]} • '
-                f'{hero["class"]} • '
-                f'{hero["position"]}**\n\n'
-                f'📝 **Description**\n'
-                f'{hero["description"]}'
+                f"**{hero['faction']} • {hero['rarity']}**\n"
+                f"**{hero['class']} • {position}**\n\n"
+                f"📝 **Description**\n"
+                f"{hero['description']}"
             ),
             color=color
         )
 
         embed.set_thumbnail(
-            url=f'attachment://{hero["id"]}.png'
+            url=f"attachment://{hero['id']}.png"
         )
 
         embed.add_field(
             name="⚒️ Recommended Gear",
             value=(
-                f'**{hero["gear"]["recommended"].replace("_", " ").title()}**\n'
-                f'Priority: '
-                f'{" → ".join(item.title() for item in hero["gear"]["priority"])}'
+                f"**{hero['gear']['recommended'].replace('_', ' ').title()}**\n"
+                f"Priority: {' → '.join(item.title() for item in hero['gear']['priority'])}"
             ),
             inline=False
         )
