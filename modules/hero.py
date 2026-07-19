@@ -16,42 +16,40 @@ class Hero(commands.Cog):
     )
     async def hero(self, interaction):
         hero_file = Path(
-        "hero_database/factions/league/heroes/legendary/adjudicator.json"
-    )
+            "hero_database/factions/league/heroes/legendary/adjudicator.json"
+        )
 
         with open(hero_file, "r", encoding="utf-8") as f:
             hero = json.load(f)
 
-    import discord
+        embed = discord.Embed(
+            title=hero["name"],
+            description=hero["description"]
+        )
 
-    embed = discord.Embed(
-        title=hero["name"],
-        description=hero["description"],
-    )
+        embed.add_field(
+            name="🏷️ Hero Info",
+            value=(
+                f'**Faction:** {hero["faction"]}\n'
+                f'**Rarity:** {hero["rarity"]}\n'
+                f'**Class:** {hero["class"]}\n'
+                f'**Position:** {hero["position"]}'
+            ),
+            inline=False
+        )
 
-    embed.add_field(
-        name="🏷️ Hero Info",
-        value=(
-            f'**Faction:** {hero["faction"]}\n'
-            f'**Rarity:** {hero["rarity"]}\n'
-            f'**Class:** {hero["class"]}\n'
-            f'**Position:** {hero["position"]}'
-        ),
-        inline=False
-    )
+        embed.add_field(
+            name="⚒️ Recommended Gear",
+            value=(
+                f'**{hero["gear"]["recommended"].replace("_", " ").title()}**\n'
+                f'Priority: {" → ".join(hero["gear"]["priority"]).title()}'
+            ),
+            inline=False
+        )
 
-    embed.add_field(
-        name="⚒️ Recommended Gear",
-        value=(
-            f'**{hero["gear"]["recommended"].replace("_", " ").title()}**\n'
-            f'Priority: {" → ".join(hero["gear"]["priority"]).title()}'
-        ),
-        inline=False
-    )
-
-    await interaction.response.send_message(
-    embed=embed
-    )
+        await interaction.response.send_message(
+            embed=embed
+        )
 
 
 async def setup(bot):
