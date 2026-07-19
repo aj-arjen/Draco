@@ -24,18 +24,14 @@ class Hero(commands.Cog):
 
         embed = discord.Embed(
             title=hero["name"],
-            description=hero["description"]
-        )
-
-        embed.add_field(
-            name="🏷️ Hero Info",
-            value=(
-                f'**Faction:** {hero["faction"]}\n'
-                f'**Rarity:** {hero["rarity"]}\n'
-                f'**Class:** {hero["class"]}\n'
-                f'**Position:** {hero["position"]}'
-            ),
-            inline=False
+            description=(
+                f'{hero["faction"]} • '
+                f'{hero["rarity"]} • '
+                f'{hero["class"]} • '
+                f'{hero["position"]}\n\n'
+                f'📝 **Description**\n'
+                f'{hero["description"]}'
+            )
         )
 
         embed.add_field(
