@@ -14,7 +14,8 @@ class Hero(commands.Cog):
         name="hero",
         description="View information about a hero."
     )
-    async def hero(self, interaction):
+    async def hero(self, interaction: discord.Interaction):
+
         hero_file = Path(
             "hero_database/factions/league/heroes/legendary/adjudicator.json"
         )
@@ -22,29 +23,63 @@ class Hero(commands.Cog):
         with open(hero_file, "r", encoding="utf-8") as f:
             hero = json.load(f)
 
+        # --------------------------------------------------
+        # Embed color based on faction
+        # --------------------------------------------------
+
+        faction_colors = {
+            "League": 0x3498DB,
+            "Horde": 0xE74C3C,
+            "Nature": 0x2ECC71
+        }
+
+        color = faction_colors.get(hero["faction"], 0xC49A3A)
+
+        # --------------------------------------------------
+        # Hero thumbnail
+        # --------------------------------------------------
+
+        image_path = f'hero_database/factions/league/heroes/images/{hero["id"]}.png'
+
+        file = discord.File(
+            image_path,
+            filename=f'{hero["id"]}.png'
+        )
+
+        # --------------------------------------------------
+        # Embed
+        # --------------------------------------------------
+
         embed = discord.Embed(
             title=hero["name"],
             description=(
-                f'{hero["faction"]} • '
+                f'**{hero["faction"]} • '
                 f'{hero["rarity"]} • '
                 f'{hero["class"]} • '
-                f'{hero["position"]}\n\n'
+                f'{hero["position"]}**\n\n'
                 f'📝 **Description**\n'
                 f'{hero["description"]}'
-            )
+            ),
+            color=color
+        )
+
+        embed.set_thumbnail(
+            url=f'attachment://{hero["id"]}.png'
         )
 
         embed.add_field(
             name="⚒️ Recommended Gear",
             value=(
                 f'**{hero["gear"]["recommended"].replace("_", " ").title()}**\n'
-                f'Priority: {" → ".join(hero["gear"]["priority"]).title()}'
+                f'Priority: '
+                f'{" → ".join(item.title() for item in hero["gear"]["priority"])}'
             ),
             inline=False
         )
 
         await interaction.response.send_message(
-            embed=embed
+            embed=embed,
+            file=file
         )
 
 
