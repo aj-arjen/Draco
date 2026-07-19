@@ -72,7 +72,7 @@ class Hero(commands.Cog):
             description=(
                 f"**{hero['faction']} • {hero['rarity']}**\n"
                 f"**{hero['class']} • {position}**\n\n"
-                f"📝 **Description**\n"
+                f"**Description**\n"
                 f"{hero['description']}"
             ),
             color=color
@@ -83,7 +83,7 @@ class Hero(commands.Cog):
         )
 
         embed.add_field(
-            name="⚒️ Recommended Gear",
+            name="Recommended Gear",
             value=(
                 f"**{hero['gear']['recommended'].replace('_', ' ').title()}**\n"
                 f"Priority: {' → '.join(item.title() for item in hero['gear']['priority'])}"
