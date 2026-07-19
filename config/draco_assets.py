@@ -7,6 +7,6 @@ DRACO_IMAGES = {
     "thinks": "assets/draco/draco_thinks.png",
     "celebrate": "assets/draco/draco_celebrate.png",
     "heart": "assets/draco/draco_heart.png",
-    "hype": "assets/draco/deaco_hype.png",
+    "hype": "assets/draco/draco_hype.png",
     "cry": "assets/draco/draco_cry.png",
 }
