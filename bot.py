@@ -21,6 +21,7 @@ class Draco(commands.Bot):
         modules = [
             "setup",
             "modules.draco",
+            "modules.hero",
             "modules.command_center",
             "modules.giftcode",
             "modules.victory",
