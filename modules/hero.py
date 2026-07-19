@@ -14,7 +14,7 @@ class Hero(commands.Cog):
         description="View information about a hero."
     )
     async def hero(self, interaction):
-    hero_file = Path(
+        hero_file = Path(
         "hero_database/factions/league/heroes/legendary/adjudicator.json"
     )
 
