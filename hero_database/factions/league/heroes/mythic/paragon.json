@@ -1,28 +1,40 @@
 {
   "id": "paragon",
   "name": "Paragon",
-
   "rarity": "Mythic",
   "faction": "League",
-  "class": "Marksman",
-
-  "position": "Middle",
-
+  "class": "Warrior",
+  "position": "Front",
   "gear": {
-    "recommended": "glory_of_the_knight",
-    "alternative": null,
+    "recommended": {
+      "set": "knight",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "General Endgame"
+      ],
+      "why": "Paragon deals most of her damage through skills. Knight increases Skill Amplification, making it the most reliable and consistent choice for the majority of players."
+    },
+    "alternative": {
+      "set": "titan",
+      "stage": [
+        "Late Game",
+        "High Investment"
+      ],
+      "why": "Titan offers higher raw damage once Paragon has significant investment, especially after upgrading her Unique Weapon. It is a strong choice for experienced players focused on maximizing damage."
+    },
     "priority": [
       "weapon",
-      "helmet"
+      "helmet",
+      "armor",
+      "boots"
     ]
   },
-
   "investment": {
     "stars": 5,
-    "rating": "Must Build"
+    "rating": "Must Build",
+    "why": "Paragon remains one of the strongest frontline damage dealers throughout the game and continues to scale well with investment."
   },
-
   "specialized_gear": null,
-
-  "description": "Paragon is one of the strongest damage dealers in the League faction. His exceptional sustained damage and excellent scaling make him a top-tier carry throughout both PvE and PvP. When properly invested, Paragon can remain a core damage dealer well into the late game."
+  "description": "A frontline warrior capable of dealing massive sustained damage while remaining durable enough to excel in nearly every game mode."
 }
