@@ -1,0 +1,44 @@
+{
+  "id": "altar_marshal",
+  "name": "Altar Marshal",
+  "rarity": "Mythic",
+  "faction": "Nature",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly improves Altar Marshal's survivability through additional HP and Damage Reduction, allowing him to absorb damage while protecting the team and maximizing the value of his defensive abilities."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear provides additional Attack, HP and Skill Damage, increasing both Altar Marshal's durability and the effectiveness of his offensive skills for players focusing on higher damage output."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Altar Marshal is one of the strongest frontline tanks in Top Heroes and a cornerstone of end-game Nature teams. His exceptional survivability, crowd control and powerful transformation make him a high-priority investment for any Nature-focused account."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Altar Marshal is a Mythic Nature tank specializing in frontline durability, crowd control and sustained pressure. His powerful defensive abilities and transformation allow him to absorb massive amounts of damage while disrupting enemy teams, making him a core hero in nearly every competitive Nature lineup."
+}
