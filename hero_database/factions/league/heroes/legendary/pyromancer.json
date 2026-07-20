@@ -1,0 +1,44 @@
+{
+  "id": "pyromancer",
+  "name": "Pyromancer",
+  "rarity": "Legendary",
+  "faction": "League",
+  "class": "Damage Dealer",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Knight Gear increases Attack, HP and Skill Damage, greatly improving Pyromancer's powerful area-of-effect abilities and allowing her to eliminate enemy teams more quickly."
+    },
+    "alternative": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "A strong alternative for players focusing on raw Attack and direct damage output before obtaining a full Knight set."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Pyromancer is one of the strongest Legendary damage dealers in Top Heroes and remains valuable well into the late game. Her exceptional area damage makes her a core hero for League teams until Mythic heroes become fully developed, and she continues to perform well in many end-game lineups."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Pyromancer is a Legendary League damage dealer specializing in devastating area-of-effect magic attacks. She excels at clearing enemy teams quickly and provides outstanding damage throughout the early, mid and late game, making her one of the best long-term Legendary investments available."
+}
