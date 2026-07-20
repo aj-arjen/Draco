@@ -1,1 +1,28 @@
+{
+  "id": "paragon",
+  "name": "Paragon",
 
+  "rarity": "Mythic",
+  "faction": "League",
+  "class": "Marksman",
+
+  "position": "Middle",
+
+  "gear": {
+    "recommended": "fury_of_blood",
+    "alternative": null,
+    "priority": [
+      "weapon",
+      "helmet"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build"
+  },
+
+  "specialized_gear": null,
+
+  "description": "Paragon is one of the strongest damage dealers in the League faction. His exceptional sustained damage and excellent scaling make him a top-tier carry throughout both PvE and PvP. When properly invested, Paragon can remain a core damage dealer well into the late game."
+}
