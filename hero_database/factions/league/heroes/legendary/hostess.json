@@ -1,0 +1,43 @@
+{
+  "id": "hostess",
+  "name": "Hostess",
+  "rarity": "Legendary",
+  "faction": "League",
+  "class": "Tank",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Hostess to survive longer while providing crowd control and supporting the frontline. The additional survivability maximizes the value of her defensive utility."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear offers additional HP and Skill Damage, making it a viable alternative once survivability is no longer an issue and stronger gear becomes available."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 2,
+    "rating": "Low Investment",
+    "why": "Hostess is a useful Legendary hero during the early game and provides valuable account-wide passive bonuses through her VIP progression. However, she is rarely part of optimized end-game lineups and should not receive Universal Legendary Shards over stronger Legendary or Mythic heroes."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Hostess is a Legendary League tank focused on survivability and defensive support. While she performs adequately during the early stages of progression, her greatest long-term value comes from the permanent account-wide bonuses unlocked through her VIP progression rather than her battlefield performance."
+}

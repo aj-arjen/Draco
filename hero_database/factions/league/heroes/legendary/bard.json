@@ -1,0 +1,43 @@
+{
+  "id": "bard",
+  "name": "Bard",
+  "rarity": "Legendary",
+  "faction": "League",
+  "class": "Support",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly improves Bard's survivability through additional HP and Damage Reduction, allowing him to remain alive longer and continuously provide buffs and support to the entire team."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear increases HP and Skill Damage, making it a viable alternative for players looking to maximize Bard's supportive abilities once survivability is no longer an issue."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 4,
+    "rating": "Strong Investment",
+    "why": "Bard is one of the strongest Legendary support heroes for League teams. His powerful buffs provide excellent value throughout the early and mid game, and he remains a reliable support option even in many late-game lineups until fully developed Mythic heroes become available."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Bard is a Legendary League support hero specializing in team-wide buffs and sustained battlefield support. His abilities significantly increase the effectiveness of allied heroes while providing valuable utility throughout every stage of progression, making him an excellent long-term investment for League-focused players."
+}

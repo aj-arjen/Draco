@@ -1,0 +1,45 @@
+{
+  "id": "nun",
+  "name": "Nun",
+  "rarity": "Legendary",
+  "faction": "League",
+  "class": "Healer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Nun to survive longer while continuously providing healing, shields and defensive buffs. The additional survivability ensures her support abilities remain active throughout extended battles."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear is a viable alternative for players focusing on stronger healing through increased Attack and Skill Damage. However, most players prefer Fury of Blood for its superior survivability."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Nun is one of the strongest Legendary support heroes in Top Heroes and remains relevant far longer than most Legendary heroes. Her healing, shields and powerful defensive buffs make her a core member of many League lineups until multiple Mythic supports become fully developed."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Nun is a Legendary League healer specializing in sustained healing, shielding and defensive support. She greatly increases her team's survivability through powerful healing and damage reduction effects, making her one of the best long-term Legendary investments for League players."
+}
