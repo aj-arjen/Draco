@@ -1,0 +1,44 @@
+{
+  "id": "astrologer",
+  "name": "Astrologer",
+  "rarity": "Legendary",
+  "faction": "League",
+  "class": "Damage Dealer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Titan's Might maximizes Astrologer's burst damage by increasing Attack and offensive stats, allowing her powerful single-target abilities to eliminate priority enemies more effectively."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Knight Gear provides additional Skill Damage and survivability, making it a strong alternative for players building a more balanced damage dealer."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 3,
+    "rating": "Good Early Investment",
+    "why": "Astrologer is a strong Legendary burst damage dealer during the early and mid game, especially in League lineups. However, she is eventually outperformed by Mythic heroes, making her a good temporary investment rather than a long-term priority."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Astrologer is a Legendary League damage dealer specializing in high burst and single-target damage. Her critical hit focused abilities allow her to quickly eliminate key enemies, making her a valuable hero throughout the early and mid game before transitioning into more situational late-game teams."
+}
