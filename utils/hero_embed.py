@@ -63,18 +63,74 @@ def build_hero_embed(hero: dict):
         url=f"attachment://{hero['id']}.png"
     )
 
-    embed.add_field(
-        name="Recommended Gear",
-        value=(
-            f"**{hero['gear']['recommended'].replace('_', ' ').title()}**\n\n"
-            f"{' → '.join(item.title() for item in hero['gear']['priority'])}"
-        ),
-        inline=False
+    # -----------------------------
+    # Recommended Gear
+    # -----------------------------
+
+    recommended = hero["gear"]["recommended"]
+
+    recommended_stage = " • ".join(recommended["stage"])
+
+    gear_text = (
+        f"**{recommended['set'].replace('_', ' ').title()}**\n\n"
+        f"**Stage**\n"
+        f"{recommended_stage}\n\n"
+        f"**Why?**\n"
+        f"{recommended['why']}\n\n"
+    )
+
+    # -----------------------------
+    # Alternative Gear
+    # -----------------------------
+
+    alternative = hero["gear"]["alternative"]
+
+    if alternative is None:
+
+        gear_text += (
+            "**Alternative**\n"
+            "None\n\n"
+        )
+
+    else:
+
+        alternative_stage = " • ".join(alternative["stage"])
+
+        gear_text += (
+            "**Alternative**\n"
+            f"**{alternative['set'].replace('_', ' ').title()}**\n\n"
+            f"**Stage**\n"
+            f"{alternative_stage}\n\n"
+            f"**Why?**\n"
+            f"{alternative['why']}\n\n"
+        )
+
+    gear_text += (
+        "**Priority**\n"
+        + " → ".join(item.title() for item in hero["gear"]["priority"])
     )
 
     embed.add_field(
+        name="Gear",
+        value=gear_text,
+        inline=False
+    )
+
+    investment = hero["investment"]
+
+    investment_text = (
+        f"{stars} • {investment['rating']}"
+    )
+
+    if "why" in investment:
+        investment_text += (
+            f"\n\n**Why?**\n"
+            f"{investment['why']}"
+        )
+
+    embed.add_field(
         name="Investment",
-        value=f"{stars} • {hero['investment']['rating']}",
+        value=investment_text,
         inline=False
     )
 
