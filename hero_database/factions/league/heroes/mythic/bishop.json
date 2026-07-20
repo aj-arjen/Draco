@@ -1,0 +1,44 @@
+{
+  "id": "bishop",
+  "name": "Bishop",
+  "rarity": "Mythic",
+  "faction": "League",
+  "class": "Damage Dealer",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear increases Attack, HP and Skill Damage, maximizing Bishop's burst damage and allowing his powerful abilities to eliminate priority targets while maintaining strong sustained DPS."
+    },
+    "alternative": {
+      "set": "Titan's Might",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Titan's Might is a strong offensive alternative for players focusing on maximizing Bishop's raw damage output, particularly once higher-end gear and exclusive upgrades become available."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Bishop is one of the strongest Mythic damage dealers for League teams. His exceptional burst damage and excellent scaling make him a core end-game hero capable of replacing Legendary damage dealers in competitive lineups."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Bishop is a Mythic League damage dealer specializing in devastating burst damage and sustained offensive pressure. His powerful abilities allow him to quickly eliminate priority targets while remaining effective throughout long battles, making him a cornerstone of many end-game League teams."
+}

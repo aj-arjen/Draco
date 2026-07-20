@@ -1,0 +1,44 @@
+{
+  "id": "rose_princess",
+  "name": "Rose Princess",
+  "rarity": "Mythic",
+  "faction": "League",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Rose Princess to maximize her survivability while building Resentment stacks and protecting the frontline. The set perfectly complements her defensive playstyle and is considered her best-in-slot gear."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear is a strong offensive alternative that increases Attack and Skill Damage, improving Rose Princess's damage output while maintaining solid durability. It is viable for aggressive builds, but Fury of Blood remains the community's preferred choice."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Rose Princess is one of the strongest Mythic frontline heroes in Top Heroes and a core member of the end-game League lineup. Her exceptional survivability, crowd control and anti-healing abilities make her one of the highest priority Mythic investments available."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Rose Princess is a Mythic League tank specializing in survivability, crowd control and sustained frontline pressure. Her unique Courage and Resentment mechanics allow her to absorb massive amounts of damage while disrupting enemy teams, making her one of the premier tanks for competitive League lineups."
+}
