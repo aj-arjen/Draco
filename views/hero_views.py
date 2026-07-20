@@ -30,7 +30,13 @@ class RarityView(View):
 
 class HeroSelect(Select):
     def __init__(self,faction:str,rarity:str):
-        options=[discord.SelectOption(label=h,value=h) for h in get_heroes(faction,rarity)]
+        options = [
+            discord.SelectOption(
+                label=h.replace("_", " ").title(),
+                value=h
+            )
+            for h in get_heroes(faction, rarity)
+        ]
         super().__init__(placeholder='Choose a hero...',options=options)
     async def callback(self,interaction:discord.Interaction):
         hero=load_hero(self.values[0])
