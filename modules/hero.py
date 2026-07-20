@@ -2,8 +2,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from utils.hero_loader import load_hero
-from utils.hero_embed import build_hero_embed
+from views.hero_views import FactionView
 
 
 class Hero(commands.Cog):
@@ -12,28 +11,16 @@ class Hero(commands.Cog):
 
     @app_commands.command(
         name="hero",
-        description="View information about a hero."
+        description="Browse heroes by faction and rarity."
     )
-    @app_commands.describe(hero="The hero to view.")
     async def hero(
         self,
-        interaction: discord.Interaction,
-        hero: str
+        interaction: discord.Interaction
     ):
-        hero_data = load_hero(hero)
-
-        if hero_data is None:
-            await interaction.response.send_message(
-                f"❌ Hero **{hero}** was not found.",
-                ephemeral=True
-            )
-            return
-
-        embed, file = build_hero_embed(hero_data)
-
         await interaction.response.send_message(
-            embed=embed,
-            file=file
+            content="Choose a faction:",
+            view=FactionView(),
+            ephemeral=True
         )
 
 
