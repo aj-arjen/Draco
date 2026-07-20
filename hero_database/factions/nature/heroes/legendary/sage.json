@@ -1,0 +1,43 @@
+{
+  "id": "sage",
+  "name": "Sage",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood significantly increases HP and Damage Reduction, allowing Sage to absorb more damage while protecting allies and maximizing the effectiveness of his defensive support abilities."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, making it a viable alternative for players looking to increase Sage's overall utility while maintaining strong frontline durability."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 4,
+    "rating": "Strong Investment",
+    "why": "Sage is one of the strongest Legendary frontline heroes for Nature teams. His durability and defensive utility make him an excellent investment throughout the early and mid game, although he is eventually replaced by Mythic tanks such as Altar Marshal in optimized end-game lineups."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Sage is a Legendary Nature tank specializing in frontline durability and defensive support. His ability to absorb damage while protecting allies makes him a reliable cornerstone for Nature teams throughout the early and mid game, remaining a valuable option until Mythic replacements become available."
+}
