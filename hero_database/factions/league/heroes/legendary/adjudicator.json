@@ -1,28 +1,34 @@
 {
   "id": "adjudicator",
   "name": "Adjudicator",
-
   "rarity": "Legendary",
   "faction": "League",
   "class": "Tank",
-
   "position": "Front",
-
   "gear": {
-    "recommended": "fury_of_blood",
+    "recommended": {
+      "set": "fury_of_blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game",
+        "Endgame"
+      ],
+      "why": "Adjudicator's shields and defensive abilities scale exceptionally well with Health and survivability. Fury of Blood maximizes her durability, allowing her to absorb damage and protect the team throughout every stage of the game."
+    },
     "alternative": null,
     "priority": [
+      "armor",
       "helmet",
-      "pants"
+      "boots",
+      "weapon"
     ]
   },
-
   "investment": {
     "stars": 5,
-    "rating": "Must Build"
+    "rating": "Must Build",
+    "why": "Adjudicator is one of the strongest frontline tanks for League teams. She remains relevant throughout the entire game and scales extremely well with higher investment."
   },
-
   "specialized_gear": null,
-
-  "description": "Adjudicator is one of the strongest Legendary tanks for the League faction. His exceptional durability and crowd control make him a reliable frontline protector, capable of performing alongside many Mythic tanks when fully upgraded."
+  "description": "A durable frontline tank who excels at protecting allies with powerful defensive abilities, shields, and exceptional survivability."
 }
