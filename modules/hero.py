@@ -64,6 +64,12 @@ class Hero(commands.Cog):
         )
 
         # --------------------------------------------------
+        # Investment
+        # --------------------------------------------------
+
+        stars = "★" * hero["investment"]["stars"] + "☆" * (5 - hero["investment"]["stars"])
+
+        # --------------------------------------------------
         # Embed
         # --------------------------------------------------
 
@@ -85,8 +91,16 @@ class Hero(commands.Cog):
         embed.add_field(
             name="Recommended Gear",
             value=(
-                f"**{hero['gear']['recommended'].replace('_', ' ').title()}**\n"
-                f"Priority: {' → '.join(item.title() for item in hero['gear']['priority'])}"
+                f"**{hero['gear']['recommended'].replace('_', ' ').title()}**\n\n"
+                f"{' → '.join(item.title() for item in hero['gear']['priority'])}"
+            ),
+            inline=False
+        )
+
+        embed.add_field(
+            name="Investment",
+            value=(
+                f"{stars} • {hero['investment']['rating']}"
             ),
             inline=False
         )
