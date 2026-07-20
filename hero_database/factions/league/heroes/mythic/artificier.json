@@ -1,0 +1,44 @@
+{
+  "id": "artificier",
+  "name": "Artificier",
+  "rarity": "Mythic",
+  "faction": "League",
+  "class": "Support",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear increases Attack, HP and Skill Damage, significantly improving Artificier's turret damage, support abilities and overall battlefield impact."
+    },
+    "alternative": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "A solid alternative when Knight Gear is unavailable. The additional HP and Damage Reduction improve Artificier's survivability, allowing her to keep supporting the team throughout longer battles."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Artificier is one of the strongest support heroes in League teams. Her turret provides consistent damage while her utility greatly increases the effectiveness of the entire lineup, making her a top priority Mythic investment for end-game League players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Artificier is a Mythic League support hero specializing in sustained damage, utility and battlefield control. Her TH-300 Turret continuously pressures enemies while her abilities strengthen the entire team, making her a cornerstone of nearly every competitive League lineup."
+}
