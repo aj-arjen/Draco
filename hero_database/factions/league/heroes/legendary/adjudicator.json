@@ -15,6 +15,10 @@
         "helmet",
         "pants"
     ]
+"investment": {
+    "stars": 5,
+    "rating": "Must Build"
+}
 },
 
 "specialized_gear": null,
