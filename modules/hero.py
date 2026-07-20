@@ -67,7 +67,9 @@ class Hero(commands.Cog):
         # Investment
         # --------------------------------------------------
 
-        stars = "★" * hero["investment"]["stars"] + "☆" * (5 - hero["investment"]["stars"])
+        filled = "⭐" * hero["investment"]["stars"]
+        empty = "✩" * (5 - hero["investment"]["stars"])
+        stars = filled + empty
 
         # --------------------------------------------------
         # Embed
