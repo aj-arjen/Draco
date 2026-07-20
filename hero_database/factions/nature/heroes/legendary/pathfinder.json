@@ -1,0 +1,43 @@
+{
+  "id": "pathfinder",
+  "name": "Pathfinder",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Damage Dealer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Titan's Might maximizes Attack and Damage Increase, allowing Pathfinder to deal the highest possible sustained ranged damage. The set complements her precision-based attacks and provides the strongest overall DPS throughout progression."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear is a viable alternative for players looking to improve Skill Damage while adding additional HP. Although it offers a more balanced build, Titan's Might remains the preferred choice for maximizing Pathfinder's damage output."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 3,
+    "rating": "Good Early Investment",
+    "why": "Pathfinder is a reliable Legendary ranged damage dealer for Nature teams during the early and mid game. She provides consistent sustained damage while progressing through campaign and PvE content, but is eventually replaced by stronger Mythic damage dealers such as Tidecaller in optimized end-game lineups."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Pathfinder is a Legendary Nature damage dealer specializing in precise ranged attacks and sustained single-target damage. Her consistent DPS makes her a dependable choice for early and mid-game Nature teams, providing reliable offensive pressure until higher-tier Mythic heroes become available."
+}

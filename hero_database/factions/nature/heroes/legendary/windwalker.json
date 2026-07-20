@@ -1,0 +1,44 @@
+{
+  "id": "windwalker",
+  "name": "Windwalker",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Damage Dealer",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Titan's Might maximizes Attack and Damage Increase, allowing Windwalker to deal the highest possible burst and sustained damage. It perfectly complements his attack-speed focused kit and is the community's recommended best-in-slot gear."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, offering a more balanced build with improved survivability while maintaining solid damage output."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 3,
+    "rating": "Good Early Investment",
+    "why": "Windwalker is an excellent early and mid-game Nature damage dealer and serves as the primary DPS until stronger heroes become available. While he performs well throughout progression, he is eventually replaced by heroes such as Ne Zha or other end-game Mythics, making him a solid but temporary investment."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Windwalker is a Legendary Nature damage dealer specializing in rapid attacks, burst damage and sustained single-target pressure. His high attack speed and reliable damage make him a core part of early Nature lineups, remaining effective until stronger end-game heroes take over his role."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "druid",
+  "name": "Druid",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Healer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Druid to survive longer while continuously healing allies and summoning Treemen. Since her value depends on staying alive throughout the battle, the additional survivability makes this her strongest overall gear set."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear is a viable alternative for players looking to improve Druid's healing through increased Attack and Skill Damage. While it provides stronger healing output, Fury of Blood remains the preferred choice for overall consistency."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 3,
+    "rating": "Good Early Investment",
+    "why": "Druid is a reliable Legendary healer for Nature teams during the early and mid game, providing healing, shields and summoned Treemen that improve team survivability. However, she is eventually replaced by stronger Mythic heroes such as Tidecaller, making her a solid temporary investment rather than a long-term priority."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Druid is a Legendary Nature healer specializing in sustained healing, shielding and summoning Treemen to support the battlefield. Her combination of healing and summoned allies makes her a dependable support hero during the early and mid game, remaining useful until Nature's Mythic healers become available."
+}

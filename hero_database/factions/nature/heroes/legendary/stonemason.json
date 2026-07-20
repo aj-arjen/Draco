@@ -1,0 +1,43 @@
+{
+  "id": "stonemason",
+  "name": "Stonemason",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Damage Dealer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Titan's Might maximizes Attack and Damage Increase, significantly improving Stonemason's sustained ranged damage. The set complements his Attack scaling and provides the highest overall damage output throughout progression."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, making it a balanced alternative for players looking to improve ability damage while maintaining respectable survivability."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 2,
+    "rating": "Low Investment",
+    "why": "Stonemason is a serviceable Legendary damage dealer during the early game, but he is quickly outperformed by stronger Nature heroes such as Forest Maiden, Pixie and later Mythic damage dealers. Most experienced players recommend avoiding heavy investment and saving resources for higher-priority heroes."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Stonemason is a Legendary Nature damage dealer specializing in sustained ranged attacks. While he provides reliable damage during the early stages of progression, his limited long-term scaling makes him a temporary option until stronger Legendary and Mythic Nature heroes become available."
+}

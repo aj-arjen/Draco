@@ -1,0 +1,43 @@
+{
+  "id": "watcher",
+  "name": "Watcher",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Damage Dealer",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "Titan's Might provides the Attack and Damage Increase needed to maximize Watcher's damage over time. It enhances both his poison effects and sustained DPS, making it the strongest option during the period where he is actually used."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Knight Gear offers a more balanced build with additional HP and Skill Damage. While it improves survivability, it cannot match the offensive value of Titan's Might for Watcher's primary role."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 2,
+    "rating": "Low Investment",
+    "why": "Watcher can contribute decent damage during the early game through poison effects and Nature team buffs, but he falls off quickly and is replaced by much stronger Legendary and Mythic heroes. Most experienced players recommend saving resources for heroes such as Forest Maiden, Pixie, Monk and Tidecaller."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Watcher is a Legendary Nature damage dealer specializing in poison damage, attack speed reduction and sustained battlefield pressure. While he offers useful utility during the early stages of progression, his limited scaling and lack of awakening make him a short-term option that is eventually replaced in competitive Nature lineups."
+}

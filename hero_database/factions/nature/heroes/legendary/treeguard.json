@@ -1,0 +1,43 @@
+{
+  "id": "treeguard",
+  "name": "Treeguard",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Treeguard to absorb more damage while protecting allies. His defensive abilities scale exceptionally well with survivability, making this his best overall gear set."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, offering a balanced alternative for players who want to improve Treeguard's utility while maintaining respectable frontline durability."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 2,
+    "rating": "Low Investment",
+    "why": "Treeguard is a dependable frontline tank during the early stages of the game and performs well in campaign and PvE content. However, he is quickly replaced by stronger Legendary and Mythic tanks such as Sage, Monk and Altar Marshal, making him a temporary investment rather than a long-term priority."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Treeguard is a Legendary Nature tank specializing in survivability and frontline protection. His defensive abilities allow him to absorb large amounts of damage during the early game, making him a reliable starter tank until stronger Nature heroes become available."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "forest_maiden",
+  "name": "Forest Maiden",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Support",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Forest Maiden to remain on the battlefield longer while continuously summoning sheep, healing allies and applying powerful team-wide buffs. The additional survivability makes it her strongest overall gear choice."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear provides additional Attack, HP and Skill Damage, improving Forest Maiden's healing, summoned units and support abilities. It is a strong alternative, but Fury of Blood remains the preferred community choice."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Forest Maiden is one of the strongest Legendary Nature heroes and remains a core member of competitive Nature teams well into the end game. Her healing, crowd control, summons and powerful team-wide buffs make her one of the highest priority Legendary investments for Nature-focused players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Forest Maiden is a Legendary Nature support hero specializing in healing, crowd control and battlefield control through summoned sheep. Her unique abilities provide damage reduction, healing and powerful offensive buffs for the entire team, making her a cornerstone of nearly every competitive Nature lineup until
