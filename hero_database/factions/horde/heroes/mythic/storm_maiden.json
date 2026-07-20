@@ -1,0 +1,44 @@
+{
+  "id": "storm_maiden",
+  "name": "Storm Maiden",
+  "rarity": "Mythic",
+  "faction": "Horde",
+  "class": "Damage Dealer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Titan's Might maximizes Attack and Damage Increase, allowing Storm Maiden to unleash devastating burst and sustained AoE damage. The set perfectly complements her Attack scaling and is widely regarded as her best-in-slot gear."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, making it a strong alternative for players seeking a more balanced build while still maintaining excellent offensive performance."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Storm Maiden is one of the strongest Mythic damage dealers available to Horde teams. Her exceptional area-of-effect damage, powerful crowd control and excellent scaling make her a core hero in competitive end-game lineups and one of the highest priority Mythic investments for Horde players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Storm Maiden is a Mythic Horde damage dealer specializing in devastating area-of-effect attacks and sustained battlefield pressure. Her powerful tornadoes and lightning abilities deal massive damage to multiple enemies while providing valuable crowd control, making her a cornerstone of nearly every end-game Horde lineup."
+}

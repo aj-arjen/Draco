@@ -1,0 +1,44 @@
+{
+  "id": "beastmaster",
+  "name": "Beastmaster",
+  "rarity": "Mythic",
+  "faction": "Horde",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, maximizing Beastmaster's survivability while allowing him to protect allies with shields, crowd control and defensive buffs. The set perfectly complements his role as Horde's premier frontline tank."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear is a strong alternative for players seeking additional HP and Skill Damage to increase Beastmaster's offensive pressure while maintaining excellent durability."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Beastmaster is one of the strongest Mythic tanks in Top Heroes and a cornerstone of every competitive Horde lineup. His exceptional survivability, shields, crowd control and team-wide protection make him one of the highest priority Mythic investments for Horde players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Beastmaster is a Mythic Horde tank specializing in frontline durability, crowd control and protecting allied heroes. His powerful defensive abilities, shielding and team support allow him to absorb tremendous amounts of damage while enabling the rest of the team to perform at their highest potential, making him an essential hero for every end-game Horde lineup."
+}

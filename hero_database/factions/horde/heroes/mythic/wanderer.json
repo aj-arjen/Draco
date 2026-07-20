@@ -1,0 +1,44 @@
+{
+  "id": "wanderer",
+  "name": "Wanderer",
+  "rarity": "Mythic",
+  "faction": "Horde",
+  "class": "Damage Dealer",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Titan's Might maximizes Attack and Damage Increase, significantly improving Wanderer's burst damage and the effectiveness of his summoned clones. The set perfectly complements his aggressive playstyle and is widely regarded as his best-in-slot gear."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, making it a strong alternative for players looking for a more balanced build with improved survivability while maintaining excellent damage output."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Wanderer is one of the strongest Mythic damage dealers in Top Heroes and a cornerstone of competitive Horde teams. His exceptional burst damage, powerful summoned clones and outstanding scaling make him one of the highest priority Mythic investments for Horde-focused players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Wanderer is a Mythic Horde damage dealer specializing in burst damage, clone summoning and sustained battlefield pressure. His unique abilities allow him to overwhelm enemies through powerful attacks while his summoned clones continue applying pressure, making him a core hero in nearly every end-game Horde lineup."
+}

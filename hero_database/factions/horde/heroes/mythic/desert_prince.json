@@ -1,0 +1,44 @@
+{
+  "id": "desert_prince",
+  "name": "Desert Prince",
+  "rarity": "Mythic",
+  "faction": "Horde",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear increases Attack, HP and Skill Damage, maximizing Desert Prince's powerful shields, true damage and team-wide defensive buffs. It provides the best balance of survivability and offensive scaling, making it the preferred end-game gear set."
+    },
+    "alternative": {
+      "set": "Titan's Might",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Titan's Might is a strong offensive alternative for players focusing on maximizing Desert Prince's Attack scaling and true damage. While it increases his damage potential, Glory of the Knight remains the community's recommended all-around choice."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Desert Prince is one of the strongest Mythic heroes in Top Heroes and a cornerstone of every competitive Horde lineup. His exceptional shielding, true damage and team-wide defensive buffs make him one of the highest priority Mythic investments for Horde players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Desert Prince is a Mythic Horde tank specializing in shielding allies, reducing incoming skill damage and dealing powerful true damage. His unique combination of survivability and offensive pressure makes him one of the most impactful frontline heroes in the game and an essential member of every end-game Horde team."
+}

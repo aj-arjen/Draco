@@ -1,0 +1,45 @@
+{
+  "id": "shadow_priest",
+  "name": "Shadow Priest",
+  "rarity": "Mythic",
+  "faction": "Horde",
+  "class": "Healer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear increases Attack, HP and Skill Damage, significantly improving Shadow Priest's healing, shields and damage reduction effects. Since her abilities scale heavily with Attack, Knight Gear provides the strongest all-around performance for end-game Horde lineups."
+    },
+    "alternative": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood is an excellent alternative when additional survivability is needed. The extra HP and Damage Reduction help Shadow Priest stay alive longer, allowing her to continuously provide healing and defensive support during extended battles."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Shadow Priest is one of the strongest Mythic support heroes for Horde and has become a core part of many end-game lineups. Her powerful healing, shielding and damage reduction significantly improve team survivability, making her one of the highest priority Mythic investments for Horde-focused players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Shadow Priest is a Mythic Horde healer specializing in powerful healing, shielding and defensive support. Her abilities greatly increase her team's survivability while weakening incoming damage, making her an exceptional support hero and a cornerstone of many competitive Horde lineups."
+}
