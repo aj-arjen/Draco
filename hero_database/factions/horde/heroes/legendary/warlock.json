@@ -1,0 +1,45 @@
+{
+  "id": "warlock",
+  "name": "Warlock",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Support",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear increases Attack, HP and Skill Damage, significantly improving Warlock's buffs, debuffs and overall support capabilities. The additional Skill Damage also enhances the effectiveness of his abilities, making it the preferred end-game choice."
+    },
+    "alternative": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "A strong alternative while progressing. The additional HP and Damage Reduction improve Warlock's survivability, allowing him to remain on the battlefield longer and continuously support the team."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Warlock is one of the strongest Legendary support heroes for Horde teams and remains relevant well into the end game. His powerful buffs and debuffs make him a core member of many Horde lineups, and he is often worth fully awakening before transitioning to later Mythic alternatives."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Warlock is a Legendary Horde support hero specializing in strengthening allies while weakening enemies through powerful buffs and debuffs. His exceptional utility and long-term viability make him one of the best Legendary investments for Horde players, remaining effective throughout every stage of progression."
+}

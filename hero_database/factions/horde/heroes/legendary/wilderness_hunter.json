@@ -1,0 +1,43 @@
+{
+  "id": "wilderness_hunter",
+  "name": "Wilderness Hunter",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Damage Dealer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Titan's Might maximizes Wilderness Hunter's Attack and Damage Increase, significantly improving her sustained damage output. The set synergizes perfectly with her bleed effects and continuous DPS playstyle, making it her best overall gear choice."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear is a strong alternative for players looking to increase Skill Damage while adding additional HP. Although viable, Titan's Might remains the preferred choice for maximizing her overall damage potential."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 4,
+    "rating": "Strong Investment",
+    "why": "Wilderness Hunter is one of the strongest Legendary damage dealers available to Horde teams and remains effective throughout the early and mid game. She provides excellent sustained damage and continues to serve as a valuable secondary damage dealer even after Mythic heroes begin replacing parts of the lineup."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Wilderness Hunter is a Legendary Horde damage dealer specializing in sustained damage and bleed effects. Her consistent ranged attacks and strong single-target pressure make her an excellent choice for progressing through the early and mid game, while remaining useful in secondary Horde lineups during the end game."
+}

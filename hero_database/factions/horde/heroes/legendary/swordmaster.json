@@ -1,0 +1,43 @@
+{
+  "id": "swordmaster",
+  "name": "Swordmaster",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Swordmaster to absorb more damage while protecting the frontline. The set complements his defensive abilities and provides the survivability needed to keep enemy pressure away from allied damage dealers."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear offers additional HP and Skill Damage, making it a viable alternative for players looking to increase Swordmaster's offensive contribution once survivability is no longer the primary concern."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 3,
+    "rating": "Good Early Investment",
+    "why": "Swordmaster is a dependable Legendary frontline hero during the early stages of Horde progression. His durability makes him an effective starter tank, but he is eventually replaced by Mythic heroes such as Beastmaster or Desert Prince in optimized end-game Horde lineups."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Swordmaster is a Legendary Horde tank specializing in frontline durability and protecting allied heroes. His defensive toolkit makes him a reliable choice for early and mid-game Horde teams, providing a solid frontline until stronger Mythic tanks become available."
+}

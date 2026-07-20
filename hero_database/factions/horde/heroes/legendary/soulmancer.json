@@ -1,0 +1,43 @@
+{
+  "id": "soulmancer",
+  "name": "Soulmancer",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Support",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Soulmancer to remain alive while continuously providing buffs and utility to the team. His value comes from staying on the battlefield for as long as possible."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game"
+      ],
+      "why": "Knight Gear provides additional HP and Skill Damage, making it a viable alternative for players who want to improve Soulmancer's offensive support while maintaining respectable survivability."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 3,
+    "rating": "Good Early Investment",
+    "why": "Soulmancer is a strong support hero for Horde teams during the early and mid game, providing valuable buffs and improving team survivability. However, his long-term value has declined as newer Mythic heroes and updated Horde lineups have become available, making him a solid temporary investment rather than a permanent end-game hero."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Soulmancer is a Legendary Horde support hero specializing in team buffs and survivability. His abilities strengthen allies and help Horde teams endure longer battles, making him a reliable support option throughout the early and mid game before transitioning into a secondary role as stronger Mythic heroes become available."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "shaman",
+  "name": "Shaman",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Healer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Shaman to survive longer while continuously healing allies. Staying alive is her highest priority, ensuring she can provide sustained healing throughout the entire battle."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear is a viable alternative for players looking to improve Shaman's healing through increased Attack and Skill Damage. While it offers greater healing potential, most players prefer Fury of Blood for the added survivability."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 4,
+    "rating": "Strong Investment",
+    "why": "Shaman is one of the strongest Legendary healers for Horde teams and remains valuable throughout the early and mid game. Her reliable healing makes her a core support hero until Witch becomes fully developed, after which she transitions into a strong secondary healer for additional game modes."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Shaman is a Legendary Horde healer specializing in sustained healing and team survivability. Her consistent healing output keeps frontline heroes alive during extended battles, making her an excellent support hero for Horde players progressing through the early and mid game while remaining useful in secondary teams later on."
+}

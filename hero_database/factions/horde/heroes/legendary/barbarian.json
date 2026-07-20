@@ -1,0 +1,44 @@
+{
+  "id": "barbarian",
+  "name": "Barbarian",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Barbarian to survive longer while protecting allies through taunts, shields and crowd control. The set perfectly complements his role as a frontline tank."
+    },
+    "alternative": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "Titan's Might is a solid alternative for players looking to increase Barbarian's offensive pressure while still maintaining respectable durability during early progression."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 4,
+    "rating": "Strong Investment",
+    "why": "Barbarian is one of the best Legendary tanks for Horde teams and provides excellent value throughout the early and mid game. His taunts, shields and debuffs make him a reliable frontline hero until he is eventually replaced by Mythic tanks in optimized end-game lineups."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Barbarian is a Legendary Horde tank specializing in crowd control, survivability and enemy disruption. His powerful defensive abilities allow him to protect allies while weakening enemy teams, making him a dependable frontline hero for Horde players progressing through the early and mid game."
+}

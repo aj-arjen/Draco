@@ -1,0 +1,43 @@
+{
+  "id": "headhunter",
+  "name": "Headhunter",
+  "rarity": "Legendary",
+  "faction": "Horde",
+  "class": "Damage Dealer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Titan's Might",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "Titan's Might provides the highest Attack and Damage Increase, maximizing Headhunter's burst damage and allowing him to eliminate priority targets more effectively."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game"
+      ],
+      "why": "Knight Gear offers additional Skill Damage and survivability, making it a reasonable alternative for players who want a more balanced offensive build."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 2,
+    "rating": "Low Investment",
+    "why": "Headhunter can deal respectable burst damage during the early game, but he is quickly outclassed by stronger Legendary and Mythic Horde damage dealers. Most experienced players recommend saving resources for heroes such as Witch, Wanderer and Storm Maiden instead."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Headhunter is a Legendary Horde damage dealer specializing in burst damage and eliminating priority targets. While he performs adequately during the early stages of progression, his limited long-term scaling means he is generally used as a temporary hero until stronger Horde damage dealers become available."
+}
