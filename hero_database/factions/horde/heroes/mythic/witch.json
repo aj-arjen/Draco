@@ -1,0 +1,44 @@
+{
+  "id": "witch",
+  "name": "Witch",
+  "rarity": "Mythic",
+  "faction": "Horde",
+  "class": "Healer",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "This provides Attack, HP and Skill Damage amplification, improving Witch's healing, Dread Golem damage and overall support capabilities."
+    },
+    "alternative": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Early Game",
+        "Mid Game"
+      ],
+      "why": "A solid alternative when Glory Of The Knight Gear is unavailable, offering additional survivability while progressing."
+    },
+    "priority": [
+      "weapon",
+      "helmet",
+      "armor",
+      "boots"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Witch is the premier Horde healer throughout the game. She provides powerful healing, damage reduction, crowd control through Dread Golem and remains a core hero in nearly every end-game Horde lineup."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Witch is a Mythic Horde support hero specializing in sustained healing, damage reduction and battlefield control. Her Dread Golem disrupts enemy formations while her healing keeps frontline heroes alive, making her one of the highest priority investments for Horde players."
+}
