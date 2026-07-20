@@ -1,0 +1,44 @@
+{
+  "id": "pixie",
+  "name": "Pixie",
+  "rarity": "Legendary",
+  "faction": "Nature",
+  "class": "Support",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Glory of the Knight increases HP and Skill Damage, improving Pixie's healing, shields and support abilities while providing additional survivability. It is widely regarded as her best-in-slot gear for maximizing her overall impact."
+    },
+    "alternative": {
+      "set": "Nature's Harmony",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Nature's Harmony enhances Pixie's supportive capabilities through increased healing and utility. While slightly less versatile than Glory of the Knight, it remains a strong alternative for support-focused Nature teams."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Pixie is one of the strongest Legendary heroes in Top Heroes and remains relevant well into the end game. Her healing, shielding, energy support and team-wide buffs make her a cornerstone of competitive Nature teams, often keeping her in lineups even after Mythic heroes become available."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Pixie is a Legendary Nature support hero specializing in healing, shielding and empowering allies with powerful buffs. Her exceptional utility and consistent support make her one of the best Legendary heroes in the game and a core member of most Nature lineups from the mid game through the end game."
+}
