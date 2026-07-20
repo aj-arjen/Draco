@@ -14,11 +14,54 @@ class Hero(commands.Cog):
         name="hero",
         description="View information about a hero."
     )
-    async def hero(self, interaction: discord.Interaction):
+    @app_commands.describe(hero="The hero to view.")
+    async def hero(
+        self,
+        interaction: discord.Interaction,
+        hero: str
+    ):
 
-        hero_file = Path(
-            "hero_database/factions/league/heroes/legendary/adjudicator.json"
-        )
+        base_path = Path("hero_database/factions")
+
+        hero_file = None
+
+        rarities = [
+            "common",
+            "rare",
+            "epic",
+            "legendary",
+            "mythic"
+        ]
+
+        # Search every faction and rarity
+        for faction in base_path.iterdir():
+
+            heroes_folder = faction / "heroes"
+
+            if not heroes_folder.exists():
+                continue
+
+            for rarity in rarities:
+
+                candidate = (
+                    heroes_folder /
+                    rarity /
+                    f"{hero.lower()}.json"
+                )
+
+                if candidate.exists():
+                    hero_file = candidate
+                    break
+
+            if hero_file:
+                break
+
+        if hero_file is None:
+            await interaction.response.send_message(
+                f"❌ Hero **{hero}** was not found.",
+                ephemeral=True
+            )
+            return
 
         with open(hero_file, "r", encoding="utf-8") as f:
             hero = json.load(f)
