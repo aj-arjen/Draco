@@ -1,0 +1,44 @@
+{
+  "id": "tidecaller",
+  "name": "Tidecaller",
+  "rarity": "Mythic",
+  "faction": "Nature",
+  "class": "Damage Dealer",
+  "position": "Mid",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood greatly increases HP and Damage Reduction, allowing Tidecaller to stay on the battlefield longer while dealing consistent damage, healing allies and summoning powerful water spirits. Her value comes from surviving long enough to continuously cycle her abilities, making this her best overall gear set."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Glory of the Knight increases HP and Skill Damage, improving both Tidecaller's offensive abilities and healing output. It is a strong alternative, but Fury of Blood remains the preferred choice for maximum consistency."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Tidecaller is widely considered the strongest Nature hero and one of the best heroes in Top Heroes. Her unique combination of high damage, powerful healing, summoned units and exceptional scaling makes her the highest priority Mythic investment for Nature-focused players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Tidecaller is a Mythic Nature damage dealer who combines high sustained damage with powerful healing and summoned water spirits. Her ability to simultaneously deal damage, support allies and overwhelm enemies makes her the centerpiece of nearly every competitive Nature lineup throughout the end game."
+}

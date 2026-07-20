@@ -1,0 +1,44 @@
+{
+  "id": "monk",
+  "name": "Monk",
+  "rarity": "Mythic",
+  "faction": "Nature",
+  "class": "Tank",
+  "position": "Front",
+
+  "gear": {
+    "recommended": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood provides a large boost to HP and Damage Reduction, maximizing Monk's ability to absorb damage while protecting his team. Since his effectiveness depends on staying alive and continuously disrupting enemies, this is his best overall gear set."
+    },
+    "alternative": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Knight Gear offers additional HP and Skill Damage, improving both Monk's survivability and the impact of his abilities. It is a strong alternative, but Fury of Blood remains the preferred choice for dedicated frontline tanking."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Monk is one of the strongest frontline tanks in Top Heroes and a cornerstone of competitive Nature teams. His exceptional durability, crowd control and team protection make him a top priority Mythic investment that remains relevant throughout the end game."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Monk is a Mythic Nature tank specializing in frontline durability, crowd control and protecting allies from incoming damage. His powerful defensive abilities allow him to disrupt enemy formations while providing a reliable frontline, making him a core hero in nearly every end-game Nature lineup."
+}

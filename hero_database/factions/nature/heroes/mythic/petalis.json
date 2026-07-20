@@ -1,0 +1,44 @@
+{
+  "id": "petalis",
+  "name": "Petalis",
+  "rarity": "Mythic",
+  "faction": "Nature",
+  "class": "Support",
+  "position": "Back",
+
+  "gear": {
+    "recommended": {
+      "set": "Glory of the Knight",
+      "stage": [
+        "Mid Game",
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Glory of the Knight increases HP and Skill Damage, allowing Petalis to strengthen her shields, healing and team-wide buffs while remaining durable enough to provide continuous support throughout battle. It is considered her best overall gear set."
+    },
+    "alternative": {
+      "set": "Fury of Blood",
+      "stage": [
+        "Late Game",
+        "End Game"
+      ],
+      "why": "Fury of Blood provides additional HP and Damage Reduction, making Petalis significantly harder to eliminate. It is an excellent alternative for PvP and longer fights where survivability is the priority."
+    },
+    "priority": [
+      "armor",
+      "helmet",
+      "boots",
+      "weapon"
+    ]
+  },
+
+  "investment": {
+    "stars": 5,
+    "rating": "Must Build",
+    "why": "Petalis is one of the strongest Mythic support heroes in Top Heroes and a cornerstone of end-game Nature teams. Her powerful shields, healing, buffs and defensive utility provide exceptional value in both PvE and PvP, making her a top investment for Nature-focused players."
+  },
+
+  "specialized_gear": null,
+
+  "description": "Petalis is a Mythic Nature support hero specializing in shielding, healing and empowering allies with powerful defensive buffs. Her exceptional utility and survivability make her a core hero in competitive Nature lineups, providing consistent protection and support throughout even the longest battles."
+}
