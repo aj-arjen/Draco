@@ -112,7 +112,7 @@ def build_hero_embed(hero: dict):
 
     embed.add_field(
         name="Gear",
-        value=gear_text,
+        value="\n" + gear_text,
         inline=False
     )
 
@@ -130,7 +130,7 @@ def build_hero_embed(hero: dict):
 
     embed.add_field(
         name="Investment",
-        value=investment_text,
+        value="\n" + investment_text,
         inline=False
     )
 
