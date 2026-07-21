@@ -30,10 +30,10 @@ class MainSelect(discord.ui.Select):
                 emoji="🔍"
             ),
             discord.SelectOption(
-                label="Faction",
-                value="faction",
-                description="Browse recommended relics by faction.",
-                emoji="🏰"
+                label="Top 3 Recommendations",
+                value="recommendations",
+                description="Browse the best relic sets.",
+                emoji="🏆"
             )
         ]
 
