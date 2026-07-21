@@ -1,6 +1,6 @@
 import discord
 
-from utils.relic_loader import load_relic
+from utils.relic_loader import load_all_relics, load_relic
 from utils.relic_embed import create_relic_embed
 
 
