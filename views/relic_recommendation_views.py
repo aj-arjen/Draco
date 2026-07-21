@@ -100,4 +100,13 @@ class BackButton(discord.ui.Button):
         )
 
     async def callback(self, interaction: discord.Interaction):
-        pass
+        embed = discord.Embed(
+            title="Relic Recommendations",
+            description="Choose a faction.",
+            color=discord.Color.green()
+        )
+
+        await interaction.response.edit_message(
+            embed=embed,
+            view=RecommendationMainView()
+        )
