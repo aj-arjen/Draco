@@ -1,0 +1,10 @@
+{
+  "id": "anti_magic_handcuffs",
+  "name": "Anti-Magic Handcuffs",
+  "faction": "League",
+  "rarity": "Legendary",
+  "type": "Support",
+  "rating": 5,
+  "why": "Excellent crowd control and survivability.",
+  "description": "Reduces enemy magic effectiveness while increasing team durability."
+}
