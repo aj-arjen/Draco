@@ -2,6 +2,7 @@ import discord
 
 from utils.relic_loader import load_all_relics, load_relic
 from utils.relic_embed import create_relic_embed
+from views.relic_recommendation_views import RecommendationMainView
 
 
 # =========================
@@ -66,134 +67,16 @@ class MainSelect(discord.ui.Select):
                 color=discord.Color.green()
             )
 
+            embed = discord.Embed(
+                title="Relic Recommendations",
+                description="Choose a faction.",
+                color=discord.Color.green()
+)
+
             await interaction.response.edit_message(
                 embed=embed,
-                view=FactionView()
+                view=RecommendationMainView()
             )
-
-
-# =========================
-# Faction View
-# =========================
-
-class FactionView(discord.ui.View):
-    def __init__(self):
-        super().__init__(timeout=180)
-        self.add_item(FactionSelect())
-
-
-# =========================
-# Faction Select
-# =========================
-
-class FactionSelect(discord.ui.Select):
-    def __init__(self):
-
-        options = [
-            discord.SelectOption(
-                label="League",
-                value="League",
-                emoji="🏰"
-            ),
-            discord.SelectOption(
-                label="Horde",
-                value="Horde",
-                emoji="🪓"
-            ),
-            discord.SelectOption(
-                label="Nature",
-                value="Nature",
-                emoji="🌿"
-            )
-        ]
-
-        super().__init__(
-            placeholder="Choose a faction...",
-            min_values=1,
-            max_values=1,
-            options=options
-        )
-
-    async def callback(self, interaction: discord.Interaction):
-
-        faction = self.values[0]
-
-        embed = discord.Embed(
-            title=f"{faction} Relics",
-            description="Choose a category.",
-            color=discord.Color.blurple()
-        )
-
-        await interaction.response.edit_message(
-            embed=embed,
-            view=FactionOptionView(faction)
-        )
-
-# =========================
-# Faction Option View
-# =========================
-
-class FactionOptionView(discord.ui.View):
-    def __init__(self, faction: str):
-        super().__init__(timeout=180)
-        self.add_item(FactionOptionSelect(faction))
-
-
-# =========================
-# Faction Option Select
-# =========================
-
-class FactionOptionSelect(discord.ui.Select):
-    def __init__(self, faction: str):
-
-        self.faction = faction
-
-        options = [
-            discord.SelectOption(
-                label="Top 3 Picks",
-                value="top3",
-                description=f"Best relics for {faction}",
-                emoji="⭐"
-            ),
-            discord.SelectOption(
-                label="Top 3 F2P Picks",
-                value="f2p",
-                description=f"Best free-to-play relics for {faction}",
-                emoji="🆓"
-            )
-        ]
-
-        super().__init__(
-            placeholder="Choose a category...",
-            min_values=1,
-            max_values=1,
-            options=options
-        )
-
-    async def callback(self, interaction: discord.Interaction):
-
-        choice = self.values[0]
-
-        if choice == "top3":
-
-            embed = discord.Embed(
-                title=f"⭐ {self.faction} • Top 3 Picks",
-                description="Coming soon...",
-                color=discord.Color.gold()
-            )
-
-        else:
-
-            embed = discord.Embed(
-                title=f"🆓 {self.faction} • Top 3 F2P Picks",
-                description="Coming soon...",
-                color=discord.Color.green()
-            )
-
-        await interaction.response.edit_message(
-            embed=embed,
-            view=None
-        )
 
 # =========================
 # Relic Select View
