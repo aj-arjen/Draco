@@ -1,0 +1,10 @@
+{
+  "id": "eye_of_fear",
+  "name": "Eye of Fear",
+  "faction": "League",
+  "rarity": "Epic",
+  "type": "Control",
+  "rating": 4,
+  "why": "A powerful Epic relic that applies Fear to disrupt enemy formations. Particularly effective for League teams, while offering less value for Horde since several Horde heroes already inflict Fear.",
+  "description": "Unleashes Abyssal Curse, inflicting Fear on enemies and disrupting their actions. Its crowd control makes it one of the strongest Epic relics for League teams and a reliable option until top-tier Legendary relics become available."
+}

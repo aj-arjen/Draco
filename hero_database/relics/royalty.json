@@ -1,0 +1,10 @@
+{
+  "id": "royalty",
+  "name": "Royalty",
+  "faction": "League",
+  "rarity": "Legendary",
+  "type": "Support",
+  "rating": 4,
+  "why": "A strong Legendary relic that enhances team survivability and complements League-focused lineups. While powerful, it is generally considered a secondary investment behind relics such as Eternal Wings and Petrification Staff.",
+  "description": "Activates Royal Decree to strengthen allied heroes while improving their defensive capabilities throughout battle. Royalty is a dependable support relic that performs especially well in League compositions and longer fights."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "mighty_gold",
+  "name": "Mighty Gold",
+  "faction": "League",
+  "rarity": "Legendary",
+  "type": "Support",
+  "rating": 4,
+  "why": "A strong Legendary relic that excels in League lineups by improving survivability while helping deal with enemy shields. Powerful, but generally considered a secondary choice behind Eternal Wings and Petrification Staff.",
+  "description": "Activates Fortune's Favor to strengthen allies while Shield Break increases effectiveness against shielded enemies. A valuable relic for League teams, especially when facing shield-heavy opponents."
+}

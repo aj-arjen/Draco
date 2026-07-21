@@ -1,0 +1,10 @@
+{
+  "id": "heros_amulet",
+  "name": "Hero's Amulet",
+  "faction": "All",
+  "rarity": "Rare",
+  "type": "Support",
+  "rating": 4,
+  "why": "One of the best Rare relics in the game. Its sustained healing remains valuable well into the mid game, making it an excellent investment for every faction.",
+  "description": "Summons a healing bonfire that restores the health of nearby allies over time. Hero's Amulet provides consistent team-wide healing and remains one of the strongest support relics available before obtaining Epic and Legendary alternatives."
+}

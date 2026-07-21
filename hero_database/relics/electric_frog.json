@@ -1,0 +1,10 @@
+{
+  "id": "electric_frog",
+  "name": "Electric Frog",
+  "faction": "League & Horde",
+  "rarity": "Epic",
+  "type": "Attack",
+  "rating": 4,
+  "why": "A strong Epic relic that targets the enemy backline with reliable crowd control. An excellent free-to-play choice until top-tier Legendary relics become available.",
+  "description": "Casts Lightning Strike, damaging enemies while having a chance to stun key backline targets. Its crowd control and consistent damage make it one of the better Epic relics for offensive teams."
+}

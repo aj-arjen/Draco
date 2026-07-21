@@ -1,0 +1,10 @@
+{
+  "id": "frost_diadem",
+  "name": "Frost Diadem",
+  "faction": "Nature",
+  "rarity": "Legendary",
+  "type": "Attack",
+  "rating": 5,
+  "why": "The premier offensive relic for Nature teams. It deals consistent area damage while applying crowd control, making it a cornerstone of endgame Nature lineups.",
+  "description": "Unleashes Bittercold Storm, damaging all enemies while inflicting Vulnerable and applying crowd control. Frost Diadem is widely regarded as the best offensive Legendary relic for Nature-focused teams."
+}

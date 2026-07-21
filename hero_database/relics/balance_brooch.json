@@ -1,0 +1,10 @@
+{
+  "id": "balance_brooch",
+  "name": "Balance Brooch",
+  "faction": "All",
+  "rarity": "Rare",
+  "type": "Attack",
+  "rating": 2,
+  "why": "A solid starter relic that provides offensive value early in the game, but is quickly outclassed by Epic and Legendary relics.",
+  "description": "Summons an Arrow Tower that attacks nearby enemies. A useful early-game relic for additional damage before stronger relics become available."
+}

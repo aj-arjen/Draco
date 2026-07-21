@@ -1,0 +1,10 @@
+{
+  "id": "war_flag",
+  "name": "War Flag",
+  "faction": "All",
+  "rarity": "Epic",
+  "type": "Support",
+  "rating": 4,
+  "why": "A strong Epic relic that provides valuable team-wide buffs for every faction. Its versatility and consistent performance make it one of the better Epic relics, especially before obtaining a full set of top-tier Legendary relics.",
+  "description": "Raises the War Flag to inspire allied heroes, increasing their combat effectiveness through powerful team-wide buffs. War Flag offers excellent utility in both PvP and PvE, making it a reliable support relic for players at every stage of progression."
+}

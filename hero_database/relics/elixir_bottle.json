@@ -1,0 +1,10 @@
+{
+  "id": "elixir_bottle",
+  "name": "Elixir Bottle",
+  "faction": "All",
+  "rarity": "Rare",
+  "type": "Support",
+  "rating": 3,
+  "why": "A solid early-game healing relic that remains useful longer than most Rare relics. Ideal for newer players until stronger Epic and Legendary support relics become available.",
+  "description": "Uses Vitality Elixir to restore health to allies, improving team survivability during battle. An excellent beginner support relic that is easy to obtain and upgrade."
+}
