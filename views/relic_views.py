@@ -62,14 +62,19 @@ class MainSelect(discord.ui.Select):
         elif self.values[0] == "recommendations":
 
             embed = discord.Embed(
-                title="Relic Recommendations",
-                description="Choose a faction.",
-                color=discord.Color.green()
+                title="🚧 Recommendations Temporarily Unavailable",
+                description=(
+                    "We're currently verifying the best relic recommendations.\n\n"
+                    "Some relics appear to exist in the game data but are not yet "
+                    "available in-game, which may result in inaccurate recommendations.\n\n"
+                    "This feature will return once the information has been verified."
+                ),
+                color=discord.Color.orange()
             )
 
             await interaction.response.edit_message(
                 embed=embed,
-                view=RecommendationMainView()
+                view=None
             )
 
 # =========================
