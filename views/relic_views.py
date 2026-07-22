@@ -47,10 +47,6 @@ class MainSelect(discord.ui.Select):
     async def callback(self, interaction: discord.Interaction):
 
         if self.values[0] == "select_relic":
-    ...
-
-        elif self.values[0] == "recommendations":
-    ...
 
             embed = discord.Embed(
                 title="Select a Relic",
@@ -63,17 +59,13 @@ class MainSelect(discord.ui.Select):
                 view=RelicSelectView()
             )
 
-            embed = discord.Embed(
-                title="Choose a Faction",
-                description="Select a faction to view the best relic recommendations.",
-                color=discord.Color.green()
-            )
+        elif self.values[0] == "recommendations":
 
             embed = discord.Embed(
                 title="Relic Recommendations",
                 description="Choose a faction.",
                 color=discord.Color.green()
-)
+            )
 
             await interaction.response.edit_message(
                 embed=embed,
