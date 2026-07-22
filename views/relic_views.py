@@ -63,8 +63,6 @@ class MainSelect(discord.ui.Select):
                 view=RelicSelectView()
             )
 
-        elif self.values[0] == "faction":
-
             embed = discord.Embed(
                 title="Choose a Faction",
                 description="Select a faction to view the best relic recommendations.",
