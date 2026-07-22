@@ -47,6 +47,10 @@ class MainSelect(discord.ui.Select):
     async def callback(self, interaction: discord.Interaction):
 
         if self.values[0] == "select_relic":
+    ...
+
+        elif self.values[0] == "recommendations":
+    ...
 
             embed = discord.Embed(
                 title="Select a Relic",
