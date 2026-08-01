@@ -73,6 +73,11 @@ class CastleSelect(discord.ui.Select):
         castles = load_all_castles()
 
         options = []
+        
+        castles = load_all_castles()
+
+        print("CASTLES:", len(castles))
+        print(castles)
 
         for castle in sorted(castles, key=lambda r: r["name"]):
 
@@ -82,6 +87,8 @@ class CastleSelect(discord.ui.Select):
                     value=castle["id"]
                 )
             )
+            
+        print("OPTIONS:", len(options))
 
         super().__init__(
             placeholder="Choose a castle...",
