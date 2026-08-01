@@ -53,11 +53,6 @@ class MainSelect(discord.ui.Select):
                 view=CastleSelectView()
             )
 
-            await interaction.response.edit_message(
-                embed=embed,
-                view=None
-            )
-
 # =========================
 # Castle Select View
 # =========================
@@ -75,7 +70,7 @@ class CastleSelectView(discord.ui.View):
 class CastleSelect(discord.ui.Select):
     def __init__(self):
 
-        relics = load_all_castles()
+        castles = load_all_castles()
 
         options = []
 
