@@ -12,7 +12,7 @@ class Castle(commands.Cog):
         name="castle",
         description="Browse castle skins"
     )
-    async def relic(self, interaction: discord.Interaction):
+    async def castle(self, interaction: discord.Interaction):
         embed = discord.Embed(
             title="🗿 Castle Skins",
             description="Choose an option below.",
