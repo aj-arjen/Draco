@@ -26,6 +26,7 @@ class Draco(commands.Bot):
             "modules.giftcode",
             "modules.victory",
             "modules.relic",
+            "modules.castle",
             "modules.redalert",
             "modules.suggestions",
             "modules.appreciation",
