@@ -42,20 +42,8 @@ class Draco(commands.Bot):
                 print(f"FAILED: {module}")
                 print(repr(e))
 
-        print(">>> ENTERING SETUP_HOOK")
-
-        for module in modules:
-            print(f">>> LOADING {module}")
-            try:
-                await self.load_extension(module)
-                print(f">>> OK {module}")
-            except Exception as e:
-                print(f">>> FAILED {module}")
-                import traceback
-                traceback.print_exc()
 
         print(">>> BEFORE SYNC")
-
         synced = await self.tree.sync()
 
         print(f">>> SYNCED {len(synced)} COMMANDS")
