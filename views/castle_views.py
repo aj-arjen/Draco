@@ -4,11 +4,65 @@ from utils.castle_loader import load_all_castles, load_castle
 from utils.castle_embed import create_castle_embed
 
 
+
 # =========================
-# Main View
+# Main View (/castle)
 # =========================
 
 class CastleMainView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=180)
+        self.add_item(MainSelect())
+
+
+# =========================
+# Main Select
+# =========================
+
+class MainSelect(discord.ui.Select):
+    def __init__(self):
+
+        options = [
+            discord.SelectOption(
+                label="Select Castle Skin",
+                value="select_castle",
+                description="Browse all castles.",
+                emoji="🔍"
+            ),
+        ]
+
+        super().__init__(
+            placeholder="Choose an option...",
+            min_values=1,
+            max_values=1,
+            options=options
+        )
+
+    async def callback(self, interaction: discord.Interaction):
+
+        if self.values[0] == "select_castle":
+
+            embed = discord.Embed(
+                title="Select a Castle Skin",
+                description="Choose a castle skin from the dropdown below.",
+                color=discord.Color.gold()
+            )
+
+            await interaction.response.edit_message(
+                embed=embed,
+                view=CastleSelectView()
+            )
+
+            await interaction.response.edit_message(
+                embed=embed,
+                view=None
+            )
+
+# =========================
+# Castle Select View
+# =========================
+
+class CastleSelectView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=180)
         self.add_item(CastleSelect())
@@ -21,11 +75,11 @@ class CastleMainView(discord.ui.View):
 class CastleSelect(discord.ui.Select):
     def __init__(self):
 
-        castles = load_all_castles()
+        relics = load_all_castles()
 
         options = []
 
-        for castle in sorted(castles, key=lambda c: c["name"]):
+        for castle in sorted(castles, key=lambda r: r["name"]):
 
             options.append(
                 discord.SelectOption(
@@ -35,7 +89,7 @@ class CastleSelect(discord.ui.Select):
             )
 
         super().__init__(
-            placeholder="Choose a Castle Skin...",
+            placeholder="Choose a castle...",
             min_values=1,
             max_values=1,
             options=options
@@ -53,7 +107,6 @@ class CastleSelect(discord.ui.Select):
                 "Castle not found.",
                 ephemeral=True
             )
-
             return
 
         embed, file = create_castle_embed(castle)
